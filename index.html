@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farhan Muhib Efty – Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Farhan Muhib Efty — Trainee Engineer at ADN DigiNet and EEE graduate. Projects in VLSI, embedded systems, and power electronics." />
+  <meta name="author" content="Farhan Muhib Efty" />
+  <meta property="og:title" content="Farhan Muhib Efty – Portfolio" />
+  <meta property="og:description"
+    content="EEE graduate & Trainee Engineer with projects across VLSI, embedded, and power electronics." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1200" />
+  <meta property="og:url" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --nav-h: 64px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: .5rem;
+      margin-bottom: 1.25rem;
+      font-size: clamp(1.75rem, 2vw + 1rem, 2.25rem);
+      font-weight: 800;
+      color: #1e3a8a;
+    }
+
+    .dark .section-title {
+      color: #93c5fd;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 56px;
+      height: 4px;
+      background-color: #3b82f6;
+      border-radius: 2px;
+    }
+
+    .card {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    }
+
+    .active-link {
+      color: #2563eb !important;
+      font-weight: 600;
+    }
+
+    [id] {
+      scroll-margin-top: var(--nav-h);
+    }
+
+    .name-badge {
+      vertical-align: middle;
+      margin-left: .5rem;
+      font-size: .8em;
+      opacity: .95
+    }
+
+    .collapsible {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .collapsible:focus-visible {
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, .5);
+    }
+
+    .collapsible .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .collapsible:hover .content,
+    .collapsible:focus-within .content {
+      max-height: 800px;
+    }
+
+    .collapsible .chev {
+      transition: transform .25s ease, opacity .25s ease;
+      opacity: .65;
+    }
+
+    .collapsible:hover .chev,
+    .collapsible:focus-within .chev {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 bg-blue-600 text-white px-3 py-2 rounded">Skip
+    to content</a>
+  <header
+    class="bg-white/90 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-800">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" id="brandLink" class="text-2xl font-extrabold tracking-tight text-blue-800 dark:text-blue-300">Farhan
+        Muhib Efty</a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">About</a>
+        <a href="#experience" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Experiences</a>
+        <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Skills</a>
+        <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Projects</a>
+        <a href="#leadership" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Leadership</a>
+        <a href="#education" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Education</a>
+        <a href="#achievements" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Achievements</a>
+        <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Contact</a>
+        <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing" id="resumeBtn"
+          class="inline-flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+          target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+        <button id="themeToggle" class="ml-2 text-slate-600 dark:text-slate-300" aria-label="Toggle dark mode"><i
+            class="fa-solid fa-moon"></i></button>
+      </div>
+      <button id="mobileBtn" class="md:hidden text-slate-700 dark:text-slate-300"><i
+          class="fas fa-bars fa-lg"></i></button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 space-y-2">
+      <a class="block py-2 nav-link" href="#about">About</a>
+      <a class="block py-2 nav-link" href="#experience">Experiences</a>
+      <a class="block py-2 nav-link" href="#skills">Skills</a>
+      <a class="block py-2 nav-link" href="#projects">Projects</a>
+      <a class="block py-2 nav-link" href="#leadership">Leadership</a>
+      <a class="block py-2 nav-link" href="#education">Education</a>
+      <a class="block py-2 nav-link" href="#achievements">Achievements</a>
+      <a class="block py-2 nav-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero-gradient text-white py-20 md:py-28">
+      <div class="container mx-auto px-6 text-center">
+        <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1600" width="160"
+          height="160" alt="Portrait of Farhan Muhib Efty"
+          class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-blue-300 shadow-xl object-cover" loading="lazy"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-3">Farhan Muhib Efty <i
+            class="fa-solid fa-shield-halved name-badge"></i></h1>
+        <p class="text-lg md:text-2xl font-medium/relaxed opacity-95">Trainee Engineer - Semiconductor Engineering, ADN
+          DigiNet</p>
+        <p class="text-lg md:text-2xl font-medium/relaxed opacity-95 mt-1">| Passionate about Innovation &amp; Business
+          | Team Player</p>
+        <div class="mt-6 flex justify-center gap-6">
+          <a href="tel:+8801521561607" aria-label="Call +8801521561607" class="hover:opacity-80"><i
+              class="fa-solid fa-phone fa-2x"></i></a>
+          <a href="https://wa.me/8801521561607" target="_blank" rel="noopener" aria-label="WhatsApp +8801521561607"
+            class="hover:opacity-80"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener" aria-label="LinkedIn"
+            class="hover:opacity-80"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/fmefty" target="_blank" rel="noopener" aria-label="GitHub"
+            class="hover:opacity-80"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://www.facebook.com/fmefty/" target="_blank" rel="noopener" aria-label="Facebook"
+            class="hover:opacity-80"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="mailto:farhanmuhibefty@gmail.com" aria-label="Email" class="hover:opacity-80"><i
+              class="fas fa-envelope fa-2x"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white dark:bg-slate-900">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
+        <div class="md:col-span-2">
+          <h2 class="section-title">About Me</h2>
+          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">👋 Hello! I'm Farhan Muhib Efty, an
+            Electrical and Electronic Engineering graduate from Ahsanullah University of Science and Technology,
+            currently working as a Trainee Engineer – Semiconductor Engineering at ADN DigiNet Ltd.</p>
+          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">💼 Proficient in MS Office,
+            G-Suite, and programming, I bring strong communication, teamwork, and leadership abilities to my role.</p>
+          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">🌟 With a keen interest in business,
+            innovation, and emerging technologies, I am dedicated to continuous learning and contributing to impactful
+            growth in the semiconductor and technology industry.</p>
+        </div>
+        <div class="md:col-span-1 flex justify-center">
+          <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1600"
+            alt="Professional headshot" class="rounded-xl shadow-xl w-full max-w-sm object-cover" loading="lazy"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Professional Experience</h2>
+        <ol class="relative border-s border-slate-200 dark:border-slate-800 ms-2">
+          <li class="mb-10 ms-6">
+            <span
+              class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white"><i
+                class="fa-solid fa-briefcase text-xs"></i></span>
+            <div class="card collapsible bg-white dark:bg-slate-900 p-6 rounded-lg border-l-4 border-blue-600"
+              tabindex="0">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-2xl font-semibold">Trainee Engineer</h3>
+                  <p class="text-blue-700 dark:text-blue-300 font-medium">ADN DigiNet Company</p>
+                  <p class="text-slate-500">Semiconductor Engineering Department</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <p class="text-slate-600 dark:text-slate-400 font-medium whitespace-nowrap">Sep 2025 – Present</p>
+                  <i class="fa-solid fa-chevron-down chev"></i>
+                </div>
+              </div>
+              <div class="content">
+                <ul class="mt-4 list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+                  <li>Training across semiconductor design, fabrication processes, and test methodologies.</li>
+                  <li>Assist with circuit layout, simulation, and verification using industry EDA tools.</li>
+                  <li>Analyze test data, identify anomalies, and support debugging.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills" class="py-16 bg-white dark:bg-slate-900">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title text-center">Skills</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold text-center mb-6">Technical Skills</h3>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fab fa-cuttlefish fa-2x text-blue-600 mb-2"></i>
+                <p>C/C++</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fab fa-python fa-2x text-blue-600 mb-2"></i>
+                <p>Python</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-database fa-2x text-blue-600 mb-2"></i>
+                <p>SQL</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-microchip fa-2x text-blue-600 mb-2"></i>
+                <p>Cadence Virtuoso</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-code-branch fa-2x text-blue-600 mb-2"></i>
+                <p>Verilog HDL</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-stream fa-2x text-blue-600 mb-2"></i>
+                <p>RTL Coding</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-cogs fa-2x text-blue-600 mb-2"></i>
+                <p>Quartus Prime</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fab fa-linux fa-2x text-blue-600 mb-2"></i>
+                <p>Linux</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-microchip fa-2x text-blue-600 mb-2"></i>
+                <p>STM32 CubeIDE</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-microchip fa-2x text-blue-600 mb-2"></i>
+                <p>Arduino</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-ruler-combined fa-2x text-blue-600 mb-2"></i>
+                <p>AutoCAD</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-chart-simple fa-2x text-blue-600 mb-2"></i>
+                <p>Power BI / Tableau</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-center mb-6">Soft & Other Skills</h3>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-users fa-2x text-blue-600 mb-2"></i>
+                <p>Leadership</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-clock fa-2x text-blue-600 mb-2"></i>
+                <p>Time Management</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-lightbulb fa-2x text-blue-600 mb-2"></i>
+                <p>Problem Solving</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-brain fa-2x text-blue-600 mb-2"></i>
+                <p>Critical & Analytical</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fas fa-cogs fa-2x text-blue-600 mb-2"></i>
+                <p>Adaptability</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-pen-nib fa-2x text-blue-600 mb-2"></i>
+                <p>Adobe CC / Canva</p>
+              </div>
+              <div class="card bg-slate-100 dark:bg-slate-800 p-4 rounded-lg"><i
+                  class="fa-solid fa-file-word fa-2x text-blue-600 mb-2"></i>
+                <p>MS Office & Google Workspace</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title text-center">Academic & Personal Projects</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Thesis" alt="Thesis project thumbnail"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Intelligent Battery Management System (Thesis)</h3>
+              <p class="text-slate-700 dark:text-slate-300">Developed an STM32-based BMS for EVs with real-time
+                monitoring; implemented protections and data logging.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=VLSI" alt="VLSI project thumbnail"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">VLSI Full Adder Design</h3>
+              <p class="text-slate-700 dark:text-slate-300">Designed and compared 8T, 10T, and 14T full adders in
+                Cadence Virtuoso; analyzed power/delay/area trade-offs.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=Robotics" alt="Robotics project thumbnail"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Fire-Fighting Robot</h3>
+              <p class="text-slate-700 dark:text-slate-300">Autonomous Arduino-based robot with flame detection and
+                extinguishing.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Power" alt="Power systems project"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Underground Cable Fault Detection</h3>
+              <p class="text-slate-700 dark:text-slate-300">Arduino-based system to detect and locate cable faults.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=SAP" alt="8-bit SAP architecture"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">8-bit Modified SAP Design</h3>
+              <p class="text-slate-700 dark:text-slate-300">Designed a modified SAP CPU focusing on fundamentals.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=Motor" alt="BLDC motor controller"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Brushless DC Motor Controller</h3>
+              <p class="text-slate-700 dark:text-slate-300">Designed and implemented a controller for a BLDC motor.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/0EA5E9/0C4A6E?text=C%2B%2B" alt="C++ project"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Travel Agency Management System (C++)</h3>
+              <p class="text-slate-700 dark:text-slate-300">Console app covering booking workflows, data structures, and
+                basic persistence.</p>
+            </div>
+          </article>
+          <article class="card bg-white dark:bg-slate-900 rounded-lg shadow overflow-hidden">
+            <img src="https://placehold.co/600x400/14B8A6/042F2E?text=Networking" alt="Networking project"
+              class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">AUST EEE Network Design</h3>
+              <p class="text-slate-700 dark:text-slate-300">Planned IP addressing & subnetting and implemented
+                structures.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="py-16 bg-white dark:bg-slate-900">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Leadership & Volunteering</h2>
+        <div class="space-y-6">
+          <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-blue-600"
+            tabindex="0">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Membership Development Coordinator (Executive Member), IEEE Young
+                  Professionals Bangladesh</h3>
+                <p class="text-slate-500">May 2025 – Present</p>
+              </div>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="content">
+              <ul class="list-disc list-inside mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+                <li>Collaborated with multiple IEEE Student Branches nationwide to co-host YP-focused programs and
+                  outreach.</li>
+                <li>Worked on flagship initiatives: <strong>YPCon 2025</strong>, <strong>IEEE YP Talk Series</strong>,
+                  and <strong>IEEE Region 10 YP UpSkill – Bangladesh 2025</strong>.</li>
+                <li>Moderated the UpSkill 2025 <em>Networking Session</em> at AUST alongside Md Abu Saleh, fostering
+                  meaningful professional connections.</li>
+                <li>Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic learning with
+                  industry-ready skills.</li>
+                <li>Drove engagement campaigns and post-event follow-ups to convert attendees into active YP members.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-blue-600"
+            tabindex="0">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Chairperson, IEEE AUST Student Branch</h3>
+                <p class="text-slate-500">Feb 2023 – Feb 2024</p>
+              </div>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="content">
+              <ul class="list-disc list-inside mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+                <li>Led 57 officers; managed operations, social media, and website to support record program delivery.
+                </li>
+                <li>Hosted two national competitions and one intra-university competition with strong industry-academic
+                  participation.</li>
+                <li>Achieved the branch’s highest membership and event count since inception.</li>
+                <li>Launched a refreshed branch website and opened a new chapter during tenure.</li>
+                <li>Collaborated with IEEE Bangladesh Section and IEEE YP on a conference and joint technical events.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-blue-600"
+            tabindex="0">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Joint Secretary, AUST Innovation & Design Club</h3>
+                <p class="text-slate-500">Dec 2022 – May 2023</p>
+              </div>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="content">
+              <ul class="list-disc list-inside mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+                <li>Operations Lead for <strong>Mindsparks’22</strong> engaging 1200+ participants from 30+
+                  institutions.</li>
+                <li>Recruited and mentored 63 juniors; achieved top revenue & sign-ups during Club Fair.</li>
+                <li>Coordinated <strong>Mindsparks’23</strong> and curated events like <em>Innoventure 21</em> and
+                  <em>Cognibat 21</em>.
+                </li>
+                <li>Oversaw event management, logistics, and promotional design assets.</li>
+                <li>Strengthened cross-club collaboration for innovation-centric programs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-blue-600"
+            tabindex="0">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Vice Chair, IEEE PES, AUST Student Branch Chapter</h3>
+                <p class="text-slate-500">Mar 2022 – Feb 2023</p>
+              </div>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="content">
+              <ul class="list-disc list-inside mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+                <li>Organized technical seminars, webinars, and member engagement sessions under IEEE PES.</li>
+                <li>Contributed to securing the <strong>High-Performance Student Branch Chapter Award</strong>.</li>
+                <li>Served as IEEE PES Day Ambassador and managed chapter social media presence.</li>
+                <li>Executed joint programs with other SB chapters to promote power & energy topics.</li>
+                <li>Supported volunteer onboarding and role-specific training for new coordinators.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-blue-600"
+            tabindex="0">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="text-xl font-semibold">Assistant Organizing Secretary, AUST EEE Society</h3>
+                <p class="text-slate-500">Nov 2021 – May 2022</p>
+              </div>
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="content">
+              <ul class="list-disc list-inside mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+                <li>Coordinated departmental workshops, seminars, and student development programs.</li>
+                <li>Planned and executed flagship events including <strong>AUST EEE DAY</strong>, sports week, and the
+                  picnic “Tridib Ucchash.”</li>
+                <li>Organized a <strong>Three-Minute Thesis</strong> presentation program for EEE students.</li>
+                <li>Contributed as a volunteer to <strong>Tech Fiesta</strong> and other outreach activities.</li>
+                <li>Handled logistics, vendor coordination, and communications for smooth event delivery.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Education</h2>
+        <div class="space-y-6">
+          <div class="card bg-white dark:bg-slate-900 p-6 rounded-lg border-l-4 border-blue-600">
+            <h3 class="text-xl font-semibold">B.Sc. in Electrical and Electronic Engineering</h3>
+            <p class="text-blue-700 dark:text-blue-300 font-medium">Ahsanullah University of Science and Technology</p>
+            <p class="text-slate-500">2019 – 2023 • <span class="font-medium text-slate-700 dark:text-slate-300">CGPA:
+                3.475/4.00</span></p>
+          </div>
+          <div class="card bg-white dark:bg-slate-900 p-6 rounded-lg border-l-4 border-blue-600">
+            <h3 class="text-xl font-semibold">Higher Secondary Certificate (HSC)</h3>
+            <p class="text-blue-700 dark:text-blue-300 font-medium">Dhaka City College</p>
+            <p class="text-slate-500">2016 – 2018 • <span class="font-medium text-slate-700 dark:text-slate-300">GPA:
+                5.00/5.00</span></p>
+          </div>
+          <div class="card bg-white dark:bg-slate-900 p-6 rounded-lg border-l-4 border-blue-600">
+            <h3 class="text-xl font-semibold">Secondary School Certificate (SSC)</h3>
+            <p class="text-blue-700 dark:text-blue-300 font-medium">Gobindaganj Govt. High School</p>
+            <p class="text-slate-500">2016 • <span class="font-medium text-slate-700 dark:text-slate-300">GPA:
+                5.00/5.00</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="py-16 bg-white dark:bg-slate-900">
+      <div class="container mx-auto px-6">
+        <h2 class="section-title">Achievements</h2>
+        <ul class="list-disc list-inside space-y-2 text-slate-700 dark:text-slate-300">
+          <li>Awarded <strong>Best Volunteer (2022)</strong> by IEEE AUST Student Branch for outstanding contributions.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-slate-950 text-slate-200 pt-12 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-3 md:grid-cols-3 gap-10 pb-10">
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Useful Links</h4>
+          <ul class="space-y-2">
+            <li><a class="hover:text-white" target="_blank" rel="noopener"
+                href="https://www.linkedin.com/in/farhanmuhibefty/"><i
+                  class="fa-brands fa-linkedin me-2"></i>LinkedIn</a></li>
+            <li><a class="hover:text-white" target="_blank" rel="noopener" href="https://github.com/fmefty"><i
+                  class="fa-brands fa-github me-2"></i>GitHub</a></li>
+            <li><a class="hover:text-white" target="_blank" rel="noopener" href="https://www.facebook.com/fmefty/"><i
+                  class="fa-brands fa-facebook me-2"></i>Facebook</a></li>
+            <li><a class="hover:text-white" target="_blank" rel="noopener"
+                href="https://www.instagram.com/farhan__muhib/"><i class="fa-brands fa-instagram me-2"></i>Instagram</a>
+            </li>
+            <li><a class="hover:text-white" target="_blank" rel="noopener"
+                href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"><i
+                  class="fa-solid fa-file-lines me-2"></i>Resume (PDF)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li><i class="fa-solid fa-phone me-2"></i><a class="hover:text-white" href="tel:01521561607">01521561607</a>
+              &nbsp; <a class="hover:text-blue-300 ml-2" target="_blank" rel="noopener"
+                href="https://wa.me/8801521561607" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><i class="fa-solid fa-square-phone me-2"></i><a class="hover:text-white"
+                href="tel:01329665865">01329665865</a> &nbsp; <a class="hover:text-blue-300 ml-2" target="_blank"
+                rel="noopener" href="https://wa.me/8801329665865" title="WhatsApp"><i
+                  class="fa-brands fa-whatsapp"></i></a></li>
+            <li><i class="fa-solid fa-envelope me-2"></i><a class="hover:text-white"
+                href="mailto:farhanmuhibefty@gmail.com">farhanmuhibefty@gmail.com</a></li>
+            <li><i class="fa-regular fa-envelope me-2"></i><a class="hover:text-white"
+                href="mailto:farhan.efty@adndiginet.com">farhan.efty@adndiginet.com</a></li>
+            <li><i class="fa-solid fa-location-dot me-2"></i>Dhaka, Bangladesh</li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <h4 class="text-lg font-semibold mb-4">Follow</h4>
+          <div class="flex items-center justify-center gap-3">
+            <a class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 grid place-items-center" target="_blank"
+              rel="noopener" href="https://www.linkedin.com/in/farhanmuhibefty/"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 grid place-items-center" target="_blank"
+              rel="noopener" href="https://github.com/fmefty"><i class="fa-brands fa-github"></i></a>
+            <a class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 grid place-items-center" target="_blank"
+              rel="noopener" href="https://www.facebook.com/fmefty/"><i class="fa-brands fa-facebook"></i></a>
+            <a class="w-10 h-10 rounded-full bg-slate-800 hover:bg-slate-700 grid place-items-center" target="_blank"
+              rel="noopener" href="https://www.instagram.com/farhan__muhib/"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-4 text-center text-slate-400">
+        &copy; <span id="year"></span> Farhan Muhib Efty. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg"
+    aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const links = Array.from(document.querySelectorAll('.nav-link'));
+    const sections = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+    const activate = (id) => links.forEach(l => l.classList.toggle('active-link', l.getAttribute('href') === '#' + id));
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(entry => { if (entry.isIntersecting) activate(entry.target.id); }),
+      { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 }
+    );
+    sections.forEach(s => observer.observe(s));
+
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => { toTop.classList.toggle('hidden', window.scrollY < 500); });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const themeToggle = document.getElementById('themeToggle');
+    const applyTheme = (theme) => { if (theme === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); };
+    const saved = localStorage.getItem('theme');
+    applyTheme(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    themeToggle.addEventListener('click', () => { const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark'; localStorage.setItem('theme', next); applyTheme(next); });
+
+    document.getElementById('resumeBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open('https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing', '_blank');
+    });
+
+    const headerEl = document.querySelector('header');
+    const navLinks = document.querySelectorAll('a.nav-link, #mobileMenu a.nav-link');
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const headerH = headerEl ? headerEl.offsetHeight : 0;
+      const y = el.getBoundingClientRect().top + window.scrollY - headerH;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    navLinks.forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href && href.startsWith('#')) { e.preventDefault(); scrollToSection(href.slice(1)); }
+      });
+    });
+
+    document.getElementById('brandLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = 'https://sites.google.com/view/farhanmuhibefty/homepage';
+      if (window.top === window) { window.location.href = url; return; }
+      const a = document.createElement('a'); a.href = url; a.target = '_top'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => { scrollToSection('home'); }, 50);
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Farhan Muhib Efty",
+    "jobTitle": "Trainee Engineer",
+    "affiliation": {"@type": "Organization", "name": "ADN DigiNet"},
+    "email": ["mailto:farhanmuhibefty@gmail.com", "mailto:farhan.efty@adndiginet.com"],
+    "telephone": ["+8801521561607", "+8801329665865"],
+    "sameAs": [
+      "https://www.linkedin.com/in/farhanmuhibefty/",
+      "https://github.com/fmefty",
+      "https://www.facebook.com/fmefty/",
+      "https://www.instagram.com/farhan__muhib/"
+    ],
+    "address": {"@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh"}
+  }
+  </script>
+</body>
+
+</html>
