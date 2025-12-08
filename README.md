@@ -5,9 +5,9 @@ A modern, professional portfolio website showcasing my experience, projects, and
 ## 🌟 Features
 
 - **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
+- **Multi-Page Layout**: Dedicated pages for Leadership, Education, and Projects for in-depth details
 - **Dark Mode Support**: Automatic dark/light theme switching based on system preferences
-- **Interactive Components**: Collapsible sections for Experience and Leadership roles
-- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
+- **Interactive UI**: Collapsible sections, project filtering, and smooth timeline animations
 - **SEO Optimized**: Includes meta tags, Open Graph, and structured data for better search visibility
 
 ## 🛠️ Technologies Used
@@ -16,14 +16,17 @@ A modern, professional portfolio website showcasing my experience, projects, and
 - **Tailwind CSS**: Utility-first CSS framework via CDN
 - **Font Awesome**: Icon library for social media and UI elements
 - **Google Fonts**: Inter font family for modern typography
-- **Vanilla JavaScript**: For interactive features and theme management
+- **Vanilla JavaScript**: For interactive features, filtering, and theme management
 
 ## 📂 Project Structure
 
 ```
-Website/
-├── index.html          # Main HTML file containing all sections
-└── README.md          # Project documentation
+my-portfolio/
+├── index.html          # Main landing page (Home, About, Experience, Skills)
+├── leadership.html     # Dedicated Leadership & Volunteering timeline
+├── education.html      # Detailed Academic Journey (B.Sc., HSC, SSC)
+├── project.html        # Comprehensive Projects portfolio with filtering
+└── README.md           # Project documentation
 ```
 
 ## 🎨 Design Highlights
@@ -31,31 +34,27 @@ Website/
 ### Color Palette
 - **Primary**: Blue tones (`#3B82F6`, `#1E3A8A`)
 - **Backgrounds**: Slate shades with dark mode variants
-- **Accents**: Multi-color scheme for different sections (blue, indigo, purple, yellow)
+- **Accents**: Multi-color scheme for different sections (blue, indigo, purple, yellow, green)
 
-### Key Sections
-1. **Hero**: Eye-catching introduction with gradient background
-2. **About**: Professional summary with image
-3. **Experience**: Timeline-based work history with collapsible details
-4. **Skills**: Grid layout showcasing technical and soft skills
-5. **Projects**: Card-based project showcase with hover effects
-6. **Leadership**: Timeline of leadership roles and volunteering
-7. **Education**: Grid display of academic qualifications
-8. **Achievements**: Highlighted accomplishments
-9. **Footer**: Contact information and social links
+### Key Sections & Pages
+1. **Home (`index.html`)**: Hero section, Professional Summary, Work Experience timeline, and Skills overview.
+2. **Projects (`project.html`)**: A robust grid layout displaying technical projects with **category filtering** (VLSI, Embedded, Robotics, etc.).
+3. **Education (`education.html`)**: A vertical timeline detailed academic milestones, including coursework breakdowns.
+4. **Leadership (`leadership.html`)**: A detailed timeline of leadership roles and volunteering activities, featuring a modern design.
+5. **Footer**: Synchronized footer across all pages with contact info and social links.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- No build tools or dependencies required
+- No build tools or dependencies required (Tailwind is loaded via CDN for simplicity)
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/farhan-efty/website.git
-cd website
+git clone https://github.com/farhan-efty/my-portfolio.git
+cd my-portfolio
 ```
 
 2. Open the website:
@@ -69,14 +68,10 @@ python -m http.server 8000
 ## 🎯 Customization
 
 ### Updating Content
-All content is contained in `index.html`. Key areas to customize:
-
-- **Personal Information**: Update name, title, and contact details
-- **About Section**: Modify the introduction text
-- **Experience**: Add/edit work experience entries
-- **Projects**: Update project cards with your work
-- **Skills**: Customize technical and soft skills lists
-- **Social Links**: Update URLs in the hero and footer sections
+- **`index.html`**: Core personal info, experience, and skills.
+- **`project.html`**: Add new projects to the grid. Use `data-category` for filtering.
+- **`education.html`**: Update academic milestones or coursework.
+- **`leadership.html`**: Add new leadership roles to the timeline.
 
 ### Styling
 The website uses Tailwind CSS classes. To modify styles:
@@ -92,20 +87,18 @@ The website uses Tailwind CSS classes. To modify styles:
 
 ## ✨ Interactive Features
 
-### Collapsible Sections
-Experience and Leadership sections use JavaScript to toggle content visibility:
-- Click on any card to expand/collapse details
-- Smooth animations for better UX
-- Keyboard accessible (Tab + Enter)
+### Project Filtering
+- Located on `project.html`
+- Filter projects by category (e.g., VLSI, Embedded/IoT, Power, Robotics)
+- Smooth entrance animations using CSS keyframes
 
-### Dark Mode
-- Automatically detects system preference
-- Uses Tailwind's `dark:` variant classes
-- Smooth transitions between themes
+### Collapsible Sections
+- Experience (in `index.html`) and Leadership (in `leadership.html`) use JavaScript to toggle content visibility.
+- Smooth animations for better UX.
 
 ## 🔗 Live Demo
 
-Visit the live website: [Your Website URL]
+Visit the live website: [https://farhan-efty.github.io/my-portfolio/](https://farhan-efty.github.io/my-portfolio/)
 
 ## 📄 License
 
@@ -115,7 +108,7 @@ This project is open source and available for personal use.
 
 **Farhan Muhib Efty**
 - LinkedIn: [@farhanmuhibefty](https://www.linkedin.com/in/farhanmuhibefty/)
-- GitHub: [@fmefty](https://github.com/fmefty)
+- GitHub: [@farhan-efty](https://github.com/farhan-efty)
 - Email: farhanmuhibefty@gmail.com
 
 ## 🙏 Acknowledgments
@@ -127,4 +120,4 @@ This project is open source and available for personal use.
 
 ---
 
-**Last Updated**: November 2025
+**Last Updated**: December 2025

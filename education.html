@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education - Farhan Muhib Efty</title>
-    <meta name="description" content="Educational background of Farhan Muhib Efty." />
+    <meta name="description" content="Academic background and coursework of Farhan Muhib Efty." />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml"
@@ -36,6 +36,15 @@
                             950: '#020617',
                         },
                     },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
                 },
             },
         }
@@ -64,11 +73,31 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+        }
+
+        .dark .timeline-line {
+            background: #1e293b;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 
 <body
-    class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-300 font-sans antialiased selection:bg-blue-500 selection:text-white">
+    class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-300 font-sans antialiased selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
@@ -115,7 +144,8 @@
                     class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
                 <a href="project.html"
                     class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
-                <a href="leadership.html" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Leadership</a>
+                <a href="leadership.html"
+                    class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Leadership</a>
                 <a href="education.html" class="text-sm font-medium text-blue-600 dark:text-blue-400">Education</a>
                 <a href="https://wa.me/8801521561607" target="_blank" rel="noopener"
                     class="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-700 transition-colors">Let's
@@ -125,246 +155,218 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 md:pt-48 md:pb-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+    <section class="pt-32 pb-16 md:pt-48 md:pb-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center">
+        <div class="container mx-auto px-6 relative z-10 text-center animate-fade-in-up">
             <h1 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
-                Educational <span
+                Academic <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Journey</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                My academic path in Electrical and Electronic Engineering, building the foundation for a career in semiconductor technology.
+                Building a strong foundation in Electrical & Electronic Engineering with a focus on VLSI, Embedded
+                Systems, and Power.
             </p>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section class="py-20 bg-slate-50 dark:bg-slate-950">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-16">
-
-                <!-- Degree 1 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-slate-950 group-hover:scale-125 transition-transform duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Science in Electrical and Electronic Engineering</h3>
-                        </div>
-                        <span
-                            class="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2019 – 2023</span>
-                    </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Ahsanullah University of Science and Technology (AUST)</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>CGPA: 3.475/4.00</li>
-                        <li>Specialized in VLSI Design, Embedded Systems, and Power Electronics</li>
-                        <li>Active member of IEEE AUST Student Branch, serving as Chairperson (Feb 2023 – Feb 2024)</li>
-                        <li>Participated in various workshops, seminars, and competitions organized by IEEE</li>
-                        <li>Completed capstone project on "Design and Implementation of a Low-Power VLSI Circuit"</li>
-                        <li>Received Dean's List award for academic excellence</li>
-                    </ul>
+    <section class="py-12 bg-slate-50 dark:bg-slate-950 flex-grow">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div
+                    class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-slate-200 dark:bg-slate-800">
                 </div>
 
-                <!-- Degree 2 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 shrink-0 group-hover:text-blue-500 transition-colors">
-                                <i class="fas fa-school"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Higher Secondary Certificate (HSC)</h3>
+                <!-- Degree 1: B.Sc. -->
+                <div class="relative mb-16 animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="flex flex-col md:flex-row items-center justify-between w-full">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <span class="text-2xl font-bold text-blue-600 dark:text-blue-400">2019 – 2023</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2016 – 2018</span>
+                        <div
+                            class="z-20 flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full ring-4 ring-white dark:ring-slate-950 shrink-0">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0">
+                            <div
+                                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 relative group hover:shadow-lg transition-all duration-300">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">B.Sc. in Electrical
+                                    and Electronic Engineering</h3>
+                                <h4 class="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">Ahsanullah
+                                    University of Science and Technology (AUST)</h4>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                    <span class="flex items-center gap-1"><i class="far fa-calendar-alt"></i> 2019 –
+                                        2023</span>
+                                    <span class="flex items-center gap-1"><i class="fas fa-star text-yellow-500"></i>
+                                        CGPA: 3.475 / 4.00</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+                                    Four-year undergraduate degree with a focus on VLSI design, digital systems,
+                                    embedded computing and power systems. Completed all 165 credits in 8 semesters.
+                                </p>
+
+                                <div class="space-y-6">
+                                    <!-- Coursework Category 1 -->
+                                    <div>
+                                        <h5
+                                            class="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+                                            <i class="fas fa-microchip text-indigo-500"></i> VLSI & Digital Design
+                                        </h5>
+                                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                                            VLSI-I & VLSI Lab, Digital Electronics I & Lab, Microprocessor, Interfacing
+                                            and System Design (+ Lab), Computer Architecture
+                                        </p>
+                                    </div>
+                                    <!-- Coursework Category 2 -->
+                                    <div>
+                                        <h5
+                                            class="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+                                            <i class="fas fa-atom text-blue-500"></i> Electronics & Semiconductors
+                                        </h5>
+                                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                                            Electronics I & II (+ Labs), Solid State Devices, Electrical Properties of
+                                            Materials, Processing and Fabrication Technology, Simulation Labs
+                                        </p>
+                                    </div>
+                                    <!-- Coursework Category 3 -->
+                                    <div>
+                                        <h5
+                                            class="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+                                            <i class="fas fa-wave-square text-green-500"></i> Signals & Control
+                                        </h5>
+                                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                                            Signals and Linear Systems, Digital Signal Processing I & Lab, Communication
+                                            Theory & Lab, Optical Fiber Communication, Control System I & Lab
+                                        </p>
+                                    </div>
+                                    <!-- Coursework Category 4 -->
+                                    <div>
+                                        <h5
+                                            class="flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+                                            <i class="fas fa-bolt text-yellow-500"></i> Power & Energy
+                                        </h5>
+                                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                                            Energy Conversion I & II (+ Labs), Power System I & II (+ Labs), Power
+                                            Electronics, Power System Protection & Lab
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Dhaka City College</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>GPA: 5.00/5.00</li>
-                        <li>Science Group with emphasis on Physics, Chemistry, and Mathematics</li>
-                        <li>Ranked among top 5% in the board examination</li>
-                        <li>Active participation in science fairs and mathematics Olympiads</li>
-                        <li>Developed early interest in electronics through school projects</li>
-                    </ul>
                 </div>
 
-                <!-- Degree 3 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 shrink-0 group-hover:text-blue-500 transition-colors">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Secondary School Certificate (SSC)</h3>
+                <!-- Degree 2: HSC -->
+                <div class="relative mb-16 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col md:flex-row-reverse items-center justify-between w-full">
+                        <div class="hidden md:block w-5/12 text-left pl-8">
+                            <span class="text-2xl font-bold text-slate-400 dark:text-slate-500">2016 – 2018</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">2014 – 2016</span>
+                        <div
+                            class="z-20 flex items-center justify-center w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full ring-4 ring-white dark:ring-slate-950 shrink-0">
+                            <i class="fas fa-university text-slate-500 dark:text-slate-400"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 pr-0 md:pr-8 mt-6 md:mt-0">
+                            <div
+                                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Higher Secondary
+                                    Certificate (HSC)</h3>
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">Dhaka City
+                                    College, Dhaka</h4>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                    <span class="flex items-center gap-1"><i class="far fa-calendar-alt"></i> 2016 –
+                                        2018</span>
+                                    <span class="flex items-center gap-1"><i class="fas fa-star text-yellow-500"></i>
+                                        GPA: 5.00 / 5.00</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-400">
+                                    Science stream with concentration in Physics, Chemistry and Mathematics.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Gobindaganj Govt. High School</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>GPA: 5.00/5.00</li>
-                        <li>Science Group with focus on foundational sciences</li>
-                        <li>Outstanding performance in mathematics and science subjects</li>
-                        <li>Participated in school science exhibitions and won prizes</li>
-                        <li>Began exploring basic electronics and circuits through hobby projects</li>
-                    </ul>
+                </div>
+
+                <!-- Degree 3: SSC -->
+                <div class="relative animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="flex flex-col md:flex-row items-center justify-between w-full">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <span class="text-2xl font-bold text-slate-400 dark:text-slate-500">2016</span>
+                        </div>
+                        <div
+                            class="z-20 flex items-center justify-center w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded-full ring-4 ring-white dark:ring-slate-950 shrink-0">
+                            <i class="fas fa-school text-slate-500 dark:text-slate-400"></i>
+                        </div>
+                        <div class="w-full md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0">
+                            <div
+                                class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Secondary School
+                                    Certificate (SSC)</h3>
+                                <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">Gobindaganj
+                                    Govt. High School, Gobindaganj</h4>
+                                <div class="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                                    <span class="flex items-center gap-1"><i class="far fa-calendar-alt"></i>
+                                        2016</span>
+                                    <span class="flex items-center gap-1"><i class="fas fa-star text-yellow-500"></i>
+                                        GPA: 5.00 / 5.00</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-400">
+                                    Completed SSC in the Science group with distinction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
 
-        <div class="mt-16 text-center">
-            <a href="index.html"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm hover:shadow-md">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
-        </div>
+            <div class="mt-20 text-center">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm hover:shadow-md">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact" class="bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-900">
+    <footer id="contact" class="bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-900 mt-auto">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 pb-12 border-b border-slate-800 items-center">
-
                 <!-- Contact Column -->
-                <div class="text-center md:text-left">
-                    <h4 class="text-2xl font-bold text-white mb-6">Get in Touch</h4>
-                    <ul class="space-y-4 text-base inline-block text-left">
-                        <li class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
-                                <i class="fas fa-map-marker-alt text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="block text-slate-400 text-sm">Location</span>
-                                <span class="text-white font-medium">Dhaka, Bangladesh</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
-                                <i class="fas fa-phone text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="block text-slate-400 text-sm">Phone</span>
-                                <a href="tel:+8801521561607"
-                                    class="hover:text-white transition-colors block font-medium">+880 1521-561607</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-green-500 shrink-0">
-                                <i class="fab fa-whatsapp text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="block text-slate-400 text-sm">WhatsApp</span>
-                                <a href="https://wa.me/8801521561607" target="_blank" rel="noopener"
-                                    class="hover:text-white transition-colors block font-medium">+880 1521-561607</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div
-                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
-                                <i class="fas fa-envelope text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="block text-slate-400 text-sm">Email</span>
-                                <a href="mailto:farhanmuhibefty@gmail.com"
-                                    class="hover:text-white transition-colors block font-medium">farhanmuhibefty@gmail.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <button id="toTop"
+                    class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg z-50"
+                    aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-                <!-- Social & Resources Column -->
-                <div class="text-center md:text-left">
-                    <h4 class="text-2xl font-bold text-white mb-6">Connect</h4>
-                    <p class="text-slate-400 mb-8 max-w-md mx-auto md:mx-0">
-                        Open for collaborations and interesting conversations about Technology and Business.
-                    </p>
+                <script>
+                    // Mobile Menu Toggle
+                    const btn = document.getElementById('mobile-menu-btn');
+                    const menu = document.getElementById('mobile-menu');
+                    btn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden');
+                    });
 
-                    <div class="flex flex-col items-center md:items-start gap-6">
-                        <!-- Social Icons -->
-                        <div class="flex gap-4">
-                            <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener"
-                                aria-label="LinkedIn"
-                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
-                                <i class="fab fa-linkedin-in text-xl group-hover:scale-110 transition-transform"></i>
-                            </a>
-                            <a href="https://github.com/fmefty" target="_blank" rel="noopener" aria-label="GitHub"
-                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-slate-700 text-slate-400 hover:text-white transition-all grid place-items-center group">
-                                <i class="fab fa-github text-xl group-hover:scale-110 transition-transform"></i>
-                            </a>
-                            <a href="https://www.facebook.com/fmefty/" target="_blank" rel="noopener"
-                                aria-label="Facebook"
-                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
-                                <i class="fab fa-facebook-f text-xl group-hover:scale-110 transition-transform"></i>
-                            </a>
-                            <a href="https://www.instagram.com/farhan__muhib/" target="_blank" rel="noopener"
-                                aria-label="Instagram"
-                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-pink-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
-                                <i class="fab fa-instagram text-xl group-hover:scale-110 transition-transform"></i>
-                            </a>
-                        </div>
+                    // Year Update
+                    document.getElementById('year').textContent = new Date().getFullYear();
 
-                        <!-- Resume Button -->
-                        <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"
-                            target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-1">
-                            <i class="fas fa-file-alt"></i> Download Resume
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-8 text-center text-slate-500 text-sm">
-                <p>&copy; <span id="year"></span> Farhan Muhib Efty. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <button id="toTop" class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg"
-        aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Year Update
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Scroll to Top
-        const toTopBtn = document.getElementById("toTop");
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                toTopBtn.classList.remove("hidden");
-            } else {
-                toTopBtn.classList.add("hidden");
-            }
-        };
-        toTopBtn.onclick = function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-    </script>
+                    // Scroll to Top
+                    const toTopBtn = document.getElementById("toTop");
+                    window.onscroll = function () {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            toTopBtn.classList.remove("hidden");
+                        } else {
+                            toTopBtn.classList.add("hidden");
+                        }
+                    };
+                    toTopBtn.onclick = function () {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    };
+                </script>
 </body>
 
 </html>
