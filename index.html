@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Farhan Muhib Efty – Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Farhan Muhib Efty — Trainee Engineer at ADN DigiNet and EEE graduate. Projects in VLSI, embedded systems, and power electronics." />
+    <meta name="author" content="Farhan Muhib Efty" />
+    <meta property="og:title" content="Farhan Muhib Efty – Portfolio" />
+    <meta property="og:description"
+        content="EEE graduate & Trainee Engineer with projects across VLSI, embedded, and power electronics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1200" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            color-scheme: light dark;
+            --nav-h: 70px;
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --bg-light: #f8fafc;
+            --bg-dark: #020617;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .dark body {
+            background-color: var(--bg-dark);
+            color: #e2e8f0;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #1e40af, #0f172a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            color: #0f172a;
+            display: inline-block;
+        }
+
+        .dark .section-title {
+            color: #f8fafc;
+        }
+
+        .card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .card {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .active-link {
+            color: #2563eb !important;
+            font-weight: 600;
+        }
+
+        [id] {
+            scroll-margin-top: var(--nav-h);
+        }
+
+        .collapsible {
+            cursor: pointer;
+        }
+
+        .collapsible .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .collapsible:hover .content,
+        .collapsible:focus-within .content {
+            max-height: 1000px;
+            transition: max-height 0.8s ease-in-out;
+        }
+
+        .collapsible .chev {
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible:hover .chev,
+        .collapsible:focus-within .chev {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 bg-blue-600 text-white px-3 py-2 rounded">Skip
+        to content</a>
+    <!-- Header Section -->
+    <header class="bg-white/90 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-50 border-b border-slate-200/60
+  dark:border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="https://sites.google.com/view/farhanmuhibefty/home" id="brandLink"
+                class="text-2xl font-extrabold tracking-tight text-blue-800 dark:text-blue-300">Farhan
+                Muhib Efty</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">About</a>
+                <a href="#experience"
+                    class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Experiences</a>
+                <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Skills</a>
+                <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Projects</a>
+                <a href="leadership.html"
+                    class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Leadership</a>
+                <a href="#education"
+                    class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Education</a>
+                <a href="#achievements"
+                    class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Achievements</a>
+                <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Contact</a>
+                <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"
+                    id="resumeBtn"
+                    class="inline-flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-800"
+                    target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                <button id="themeToggle" class="ml-2 text-slate-600 dark:text-slate-300"
+                    aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <button id="mobileBtn" class="md:hidden text-slate-700 dark:text-slate-300"><i
+                    class="fas fa-bars fa-lg"></i></button>
+        </nav>
+        <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 space-y-2">
+            <a class="block py-2 nav-link" href="#about">About</a>
+            <a class="block py-2 nav-link" href="#experience">Experiences</a>
+            <a class="block py-2 nav-link" href="#skills">Skills</a>
+            <a class="block py-2 nav-link" href="#projects">Projects</a>
+            <a class="block py-2 nav-link" href="leadership.html">Leadership</a>
+            <a class="block py-2 nav-link" href="#education">Education</a>
+            <a class="block py-2 nav-link" href="#achievements">Achievements</a>
+            <a class="block py-2 nav-link" href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient text-white py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="relative inline-block mb-8 group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1600"
+                        width="180" height="180" alt="Portrait of Farhan Muhib Efty"
+                        class="relative w-44 h-44 rounded-full border-4 border-white/20 shadow-2xl object-cover"
+                        loading="lazy" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Farhan Muhib Efty</h1>
+                <p class="text-xl md:text-2xl font-light text-blue-100 mb-2">Trainee Engineer - Semiconductor
+                    Engineering</p>
+                <p class="text-blue-200 font-medium tracking-wide uppercase text-sm">ADN DigiNet</p>
+
+                <div class="mt-10 flex justify-center gap-5">
+                    <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"
+                        class="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110"><i
+                            class="fab fa-linkedin fa-xl"></i></a>
+                    <a href="https://github.com/farhan-efty" target="_blank" rel="noopener" aria-label="GitHub"
+                        class="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110"><i
+                            class="fab fa-github fa-xl"></i></a>
+                    <a href="mailto:farhanmuhibefty@gmail.com" aria-label="Email"
+                        class="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110"><i
+                            class="fas fa-envelope fa-xl"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                        <p>👋 Hello! I'm <strong>Farhan Muhib Efty</strong>, an Electrical and Electronic Engineering
+                            graduate from
+                            Ahsanullah University of Science and Technology, currently working as a Trainee Engineer –
+                            Semiconductor
+                            Engineering at ADN DigiNet Company.</p>
+                        <p>💻 My core focus is on <strong>VLSI Design Verification (DV)</strong>. I am building
+                            expertise in
+                            SystemVerilog, UVM, and RTL, while utilizing modern development tools like VS Code, Git
+                            Bash, and
+                            Makefiles to streamline verification workflows.</p>
+                        <p>🌟 Driven by the challenge of "silicon perfection," I am dedicated to continuous learning in
+                            semiconductor technologies. I aim to combine technical precision with strong problem-solving
+                            skills to
+                            contribute to complex verification projects.</p>
+                    </div>
+                </div>
+                <div class="relative max-w-md mx-auto">
+                    <div class="absolute inset-0 bg-blue-600 rounded-2xl rotate-3 opacity-10"></div>
+                    <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1600"
+                        alt="Professional headshot"
+                        class="relative rounded-2xl shadow-2xl w-full object-cover transform -rotate-3 hover:rotate-0 transition duration-500"
+                        loading="lazy" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
+
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Trainee
+                                        Engineer</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">ADN DigiNet</p>
+                                    <p class="text-sm text-slate-500 mt-1">Semiconductor Engineering Department</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Sep 2025 – Present</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul <ul
+                                    class="mt-4 space-y-3 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li><strong>VLSI & Verification Training:</strong> Actively training in
+                                        semiconductor fabrication
+                                        processes and Design Verification (DV) methodologies, with a specific emphasis
+                                        on SystemVerilog and
+                                        UVM testbench architectures.</li>
+                                    <li><strong>Simulation & Tools:</strong> Assisting with circuit layout, simulation,
+                                        and verification
+                                        using industry-standard EDA tools; utilizing VS Code, Git Bash, and Makefiles
+                                        for efficient code
+                                        development and version control.</li>
+                                    <li><strong>Debugging & Analysis:</strong> Analyzing test data to identify design
+                                        anomalies and
+                                        supporting the debugging process to ensure robust functionality before tapeout.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center w-full">Technical Expertise</h2>
+
+                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Technical Skills -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
+                            <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 p-2 rounded-lg"><i
+                                    class="fas fa-code"></i></span>
+                            Technical Skills
+                        </h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fab fa-cuttlefish fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">C/C++</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fab fa-python fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Python</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-database fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">SQL</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Cadence</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-code-branch fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Verilog</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-stream fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">RTL</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-cogs fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Quartus</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fab fa-linux fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Linux</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                <i
+                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                <span class="font-medium text-sm">STM32</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
+                            <span class="bg-purple-100 dark:bg-purple-900/30 text-purple-600 p-2 rounded-lg"><i
+                                    class="fas fa-users"></i></span>
+                            Soft Skills & Tools
+                        </h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fas fa-users fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Leadership</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fas fa-clock fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Time Management</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fas fa-lightbulb fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Problem Solving</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fas fa-brain fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Critical Thinking</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fa-solid fa-pen-nib fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Design Tools</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                <i
+                                    class="fa-solid fa-file-word fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                <span class="font-medium text-sm">Office Suite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="section-title mb-4">Featured Projects</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg">A selection of my work in VLSI, Embedded
+                        Systems, and
+                        Power Engineering.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Thesis"
+                                alt="Thesis project thumbnail"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full border border-blue-100 dark:border-blue-800">Research</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full">STM32</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                Intelligent BMS (Thesis)</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Developed an STM32-based Battery Management System for EVs with real-time monitoring,
+                                protection
+                                circuits, and data logging capabilities.
+                            </p>
+                            <a href="https://drive.google.com/file/d/1eZzYwo9dJ_IuKDibzf6YglpDGZGlwILZ/view"
+                                target="_blank" rel="noopener"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=VLSI" alt="VLSI project thumbnail"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-full border border-indigo-100 dark:border-indigo-800">VLSI</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full">Cadence</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                VLSI Full Adder Design</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Designed and compared 8T, 10T, and 14T full adders in Cadence Virtuoso. Analyzed power,
+                                delay, and area
+                                trade-offs for optimal performance.
+                            </p>
+                            <a href="https://github.com/farhan-efty/Analysis-of-8T-10T-and-14T-1-bit-full-adders-in-comparison"
+                                target="_blank" rel="noopener"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=Robotics"
+                                alt="Robotics project thumbnail"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full border border-red-100 dark:border-red-800">Robotics</span>
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-full">Arduino</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                Fire-Fighting Robot</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Autonomous Arduino-based robot equipped with flame sensors and extinguishing mechanism.
+                                Navigates
+                                obstacles to locate and put out fires.
+                            </p>
+                            <a href="https://github.com/farhan-efty/Fire-Fighting-Robot-using-Arduino" target="_blank"
+                                rel="noopener"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Power" alt="Power systems project"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 rounded-full border border-yellow-100 dark:border-yellow-800">Power</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                Cable Fault Detection</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Arduino-based system designed to detect and precisely locate faults in underground
+                                cables using Ohm's
+                                law principles.
+                            </p>
+                            <a href="https://github.com/farhan-efty/Underground-Cable-Fault-Detection-Using-Arduino."
+                                target="_blank" rel="noopener"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=SAP" alt="8-bit SAP architecture"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full border border-purple-100 dark:border-purple-800">Architecture</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                8-bit Modified SAP</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Designed a modified Simple As Possible (SAP) CPU architecture. Focused on understanding
+                                the fundamental
+                                building blocks of computer organization.
+                            </p>
+                            <a href="https://github.com/farhan-efty/8-Bit-Modified-SAP-Design" target="_blank"
+                                rel="noopener"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article
+                        class="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=Motor" alt="BLDC motor controller"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                                loading="lazy" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                <span
+                                    class="text-white font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View
+                                    Details</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 text-xs font-semibold bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full border border-green-100 dark:border-green-800">Control</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                BLDC Motor Controller</h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                                Designed and implemented a controller for a Brushless DC motor. Implemented commutation
+                                logic and speed
+                                control algorithms.
+                            </p>
+                            <a href="#"
+                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:underline mt-auto">
+                                View Project <i
+                                    class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="py-20 bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Leadership & Volunteering</h2>
+                <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
+
+                    <!-- Item 1 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Membership Development
+                                        Coordinator</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE Young Professionals
+                                        Bangladesh</p>
+                                    <p class="text-sm text-slate-500 mt-1">Executive Member</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>May 2025 – Present</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul
+                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li>Collaborated with multiple IEEE Student Branches nationwide to co-host
+                                        YP-focused programs and
+                                        outreach.</li>
+                                    <li>Worked on flagship initiatives: <strong>YPCon 2025</strong>, <strong>IEEE YP
+                                            Talk Series</strong>,
+                                        and <strong>IEEE Region 10 YP UpSkill – Bangladesh 2025</strong>.</li>
+                                    <li>Moderated the UpSkill 2025 <em>Networking Session</em> at AUST alongside Md Abu
+                                        Saleh, fostering
+                                        meaningful professional connections.</li>
+                                    <li>Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic
+                                        learning with
+                                        industry-ready skills.</li>
+                                    <li>Drove engagement campaigns and post-event follow-ups to convert attendees into
+                                        active YP members.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chairperson</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE AUST Student Branch</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Feb 2023 – Feb 2024</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul
+                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li>Led 57 officers; managed operations, social media, and website to support record
+                                        program delivery.
+                                    </li>
+                                    <li>Hosted two national competitions and one intra-university competition with
+                                        strong
+                                        industry-academic participation.</li>
+                                    <li>Achieved the branch’s highest membership and event count since inception.</li>
+                                    <li>Launched a refreshed branch website and opened a new chapter during tenure.</li>
+                                    <li>Collaborated with IEEE Bangladesh Section and IEEE YP on a conference and joint
+                                        technical events.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Joint Secretary</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">AUST Innovation & Design
+                                        Club</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Dec 2022 – May 2023</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul
+                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li>Operations Lead for <strong>Mindsparks’22</strong> engaging 1200+ participants
+                                        from 30+
+                                        institutions.</li>
+                                    <li>Recruited and mentored 63 juniors; achieved top revenue & sign-ups during Club
+                                        Fair.</li>
+                                    <li>Coordinated <strong>Mindsparks’23</strong> and curated events like
+                                        <em>Innoventure 21</em> and
+                                        <em>Cognibat 21</em>.
+                                    </li>
+                                    <li>Oversaw event management, logistics, and promotional design assets.</li>
+                                    <li>Strengthened cross-club collaboration for innovation-centric programs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Vice Chair</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE PES, AUST Student
+                                        Branch Chapter</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Mar 2022 – Feb 2023</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul
+                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li>Organized technical seminars, webinars, and member engagement sessions under
+                                        IEEE PES.</li>
+                                    <li>Contributed to securing the <strong>High-Performance Student Branch Chapter
+                                            Award</strong>.</li>
+                                    <li>Served as IEEE PES Day Ambassador and managed chapter social media presence.
+                                    </li>
+                                    <li>Executed joint programs with other SB chapters to promote power & energy topics.
+                                    </li>
+                                    <li>Supported volunteer onboarding and role-specific training for new coordinators.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="relative pl-8 md:pl-12">
+                        <span
+                            class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
+                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
+                            tabindex="0">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Assistant Organizing
+                                        Secretary</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-medium">AUST EEE Society</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Nov 2021 – May 2022</span>
+                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul
+                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                    <li>Coordinated departmental workshops, seminars, and student development programs.
+                                    </li>
+                                    <li>Planned and executed flagship events including <strong>AUST EEE DAY</strong>,
+                                        sports week, and the
+                                        picnic “Tridib Ucchash.”</li>
+                                    <li>Organized a <strong>Three-Minute Thesis</strong> presentation program for EEE
+                                        students.</li>
+                                    <li>Contributed as a volunteer to <strong>Tech Fiesta</strong> and other outreach
+                                        activities.</li>
+                                    <li>Handled logistics, vendor coordination, and communications for smooth event
+                                        delivery.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Education</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">B.Sc. in Electrical and
+                            Electronic
+                            Engineering</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium text-sm mb-4">Ahsanullah University of
+                            Science and
+                            Technology</p>
+                        <div
+                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <span>2019 – 2023</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-300">CGPA: 3.475/4.00</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-school text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Higher Secondary Certificate
+                            (HSC)</h3>
+                        <p class="text-indigo-600 dark:text-indigo-400 font-medium text-sm mb-4">Dhaka City College</p>
+                        <div
+                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <span>2016 – 2018</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-300">GPA: 5.00/5.00</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-book-open text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Secondary School Certificate
+                            (SSC)</h3>
+                        <p class="text-purple-600 dark:text-purple-400 font-medium text-sm mb-4">Gobindaganj Govt. High
+                            School</p>
+                        <div
+                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
+                            <span>2016</span>
+                            <span class="font-semibold text-slate-700 dark:text-slate-300">GPA: 5.00/5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 bg-slate-50 dark:bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Achievements</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div
+                        class="card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center text-yellow-600 shrink-0">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Best Volunteer (2022)</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Awarded by IEEE AUST Student Branch for
+                                outstanding
+                                contributions and dedication to the community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 pb-12 border-b border-slate-800 items-center">
+
+                <!-- Contact Column -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-white mb-6">Get in Touch</h4>
+                    <ul class="space-y-4 text-base inline-block text-left">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
+                                <i class="fas fa-map-marker-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 text-sm">Location</span>
+                                <span class="text-white font-medium">Dhaka, Bangladesh</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
+                                <i class="fas fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 text-sm">Phone</span>
+                                <a href="tel:+8801521561607"
+                                    class="hover:text-white transition-colors block font-medium">+880
+                                    1521-561607</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-green-500 shrink-0">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 text-sm">WhatsApp</span>
+                                <a href="https://wa.me/8801521561607" target="_blank" rel="noopener"
+                                    class="hover:text-white transition-colors block font-medium">+880 1521-561607</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-blue-500 shrink-0">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 text-sm">Email</span>
+                                <a href="mailto:farhanmuhibefty@gmail.com"
+                                    class="hover:text-white transition-colors block font-medium">farhanmuhibefty@gmail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social & Resources Column -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-2xl font-bold text-white mb-6">Connect</h4>
+                    <p class="text-slate-400 mb-8 max-w-md mx-auto md:mx-0">
+                        Open for collaborations and interesting conversations about Technology and Business.
+                    </p>
+
+                    <div class="flex flex-col items-center md:items-start gap-6">
+                        <!-- Social Icons -->
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"
+                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
+                                <i class="fab fa-linkedin-in text-xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://github.com/farhan-efty" target="_blank" rel="noopener" aria-label="GitHub"
+                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-slate-700 text-slate-400 hover:text-white transition-all grid place-items-center group">
+                                <i class="fab fa-github text-xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://www.facebook.com/fmefty/" target="_blank" rel="noopener"
+                                aria-label="Facebook"
+                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
+                                <i class="fab fa-facebook-f text-xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://www.instagram.com/farhan__muhib/" target="_blank" rel="noopener"
+                                aria-label="Instagram"
+                                class="w-12 h-12 rounded-full bg-slate-900 hover:bg-pink-600 text-slate-400 hover:text-white transition-all grid place-items-center group">
+                                <i class="fab fa-instagram text-xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Resume Button -->
+                        <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"
+                            target="_blank" rel="noopener"
+                            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-1">
+                            <i class="fas fa-file-alt"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; <span id="year"></span> Farhan Muhib Efty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="toTop" class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg"
+        aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        const links = Array.from(document.querySelectorAll('.nav-link'));
+        const sections = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+        const activate = (id) => links.forEach(l => l.classList.toggle('active-link', l.getAttribute('href') === '#' + id));
+        const observer = new IntersectionObserver(
+            entries => entries.forEach(entry => { if (entry.isIntersecting) activate(entry.target.id); }),
+            { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 }
+        );
+        sections.forEach(s => observer.observe(s));
+
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => { toTop.classList.toggle('hidden', window.scrollY < 500); });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const themeToggle = document.getElementById('themeToggle');
+        const applyTheme = (theme) => { if (theme === 'dark') document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); };
+        const saved = localStorage.getItem('theme');
+        applyTheme(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        themeToggle.addEventListener('click', () => { const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark'; localStorage.setItem('theme', next); applyTheme(next); });
+
+        document.getElementById('resumeBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing', '_blank');
+        });
+
+        const headerEl = document.querySelector('header');
+        const navLinks = document.querySelectorAll('a.nav-link, #mobileMenu a.nav-link');
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const headerH = headerEl ? headerEl.offsetHeight : 0;
+            const y = el.getBoundingClientRect().top + window.scrollY - headerH;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        navLinks.forEach(a => {
+            a.addEventListener('click', e => {
+                const href = a.getAttribute('href');
+                if (href && href.startsWith('#')) { e.preventDefault(); scrollToSection(href.slice(1)); }
+            });
+        });
+
+        document.getElementById('brandLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = 'https://sites.google.com/view/farhanmuhibefty/homepage';
+            if (window.top === window) { window.location.href = url; return; }
+            const a = document.createElement('a'); a.href = url; a.target = '_top'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
+            setTimeout(() => { scrollToSection('home'); }, 50);
+        });
+    </script>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Farhan Muhib Efty",
+    "jobTitle": "Trainee Engineer",
+    "affiliation": {"@type": "Organization", "name": "ADN DigiNet"},
+    "email": ["mailto:farhanmuhibefty@gmail.com", "mailto:farhan.efty@adndiginet.com"],
+    "telephone": ["+8801521561607", "+8801329665865"],
+    "sameAs": [
+      "https://www.linkedin.com/in/farhanmuhibefty/",
+      "https://github.com/farhan-efty",
+      "https://www.facebook.com/fmefty/",
+      "https://www.instagram.com/farhan__muhib/"
+    ],
+    "address": {"@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "Bangladesh"}
+  }
+  </script>
+</body>
+
+</html>
