@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Farhan Muhib Efty</title>
-    <meta name="description" content="Featured projects of Farhan Muhib Efty in VLSI, Embedded Systems, and Power Engineering." />
+    <meta name="description"
+        content="Featured projects of Farhan Muhib Efty in VLSI, Embedded Systems, and Power Engineering." />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml"
@@ -36,6 +37,15 @@
                             950: '#020617',
                         },
                     },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
                 },
             },
         }
@@ -64,11 +74,20 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
 
 <body
-    class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-300 font-sans antialiased selection:bg-blue-500 selection:text-white">
+    class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-300 font-sans antialiased selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
@@ -114,8 +133,10 @@
                 <a href="index.html#experience"
                     class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
                 <a href="project.html" class="text-sm font-medium text-blue-600 dark:text-blue-400">Projects</a>
-                <a href="leadership.html" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Leadership</a>
-                <a href="education.html" class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
+                <a href="leadership.html"
+                    class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Leadership</a>
+                <a href="education.html"
+                    class="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
                 <a href="https://wa.me/8801521561607" target="_blank" rel="noopener"
                     class="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-700 transition-colors">Let's
                     Talk (WhatsApp)</a>
@@ -124,13 +145,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 md:pt-48 md:pb-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+    <section class="pt-32 pb-16 md:pt-48 md:pb-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center">
+        <div class="container mx-auto px-6 relative z-10 text-center animate-fade-in-up">
             <h1 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">
                 Featured <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Projects</span>
@@ -141,223 +162,266 @@
         </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="py-20 bg-slate-50 dark:bg-slate-950">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-16">
+    <!-- Projects Grid Section -->
+    <section class="py-12 bg-slate-50 dark:bg-slate-950 flex-grow">
+        <div class="container mx-auto px-6">
 
-                <!-- Project 1 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-slate-950 group-hover:scale-125 transition-transform duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-microchip text-blue-600 dark:text-blue-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Intelligent BMS (Thesis)</h3>
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in-up" style="animation-delay: 0.1s;">
+                <button onclick="filterProjects('all')"
+                    class="filter-btn active px-5 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-blue-600 hover:text-white hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white transition-all shadow-sm">
+                    All Projects
+                </button>
+                <button onclick="filterProjects('vlsi')"
+                    class="filter-btn px-5 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-600 dark:hover:text-white transition-all shadow-sm">
+                    VLSI
+                </button>
+                <button onclick="filterProjects('embedded')"
+                    class="filter-btn px-5 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-green-600 hover:text-white hover:border-green-600 dark:hover:bg-green-600 dark:hover:text-white transition-all shadow-sm">
+                    Embedded/IoT
+                </button>
+                <button onclick="filterProjects('power')"
+                    class="filter-btn px-5 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-yellow-600 hover:text-white hover:border-yellow-600 dark:hover:bg-yellow-600 dark:hover:text-white transition-all shadow-sm">
+                    Power
+                </button>
+                <button onclick="filterProjects('robotics')"
+                    class="filter-btn px-5 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-red-600 hover:text-white hover:border-red-600 dark:hover:bg-red-600 dark:hover:text-white transition-all shadow-sm">
+                    Robotics
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- Project 1 (VLSI/Embedded) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="embedded vlsi">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-600/10 group-hover:bg-blue-600/0 transition-colors z-10">
                         </div>
-                        <span
-                            class="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Research</span>
+                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=BMS" alt="BMS Thesis"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-blue-100 text-blue-700 rounded-full shadow-sm">Research</span>
+                        </div>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">STM32-based Battery Management System for EVs</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Developed a comprehensive Battery Management System using STM32 microcontroller</li>
-                        <li>Implemented real-time monitoring of battery parameters including voltage, current, and temperature</li>
-                        <li>Designed protection circuits for overcharge, over-discharge, and short-circuit prevention</li>
-                        <li>Incorporated data logging capabilities for performance analysis and diagnostics</li>
-                        <li>Focused on safety and efficiency for electric vehicle applications</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="https://drive.google.com/file/d/1eZzYwo9dJ_IuKDibzf6YglpDGZGlwILZ/view" target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fas fa-external-link-alt"></i> View Project
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 transition-colors">
+                            Intelligent BMS (Thesis)</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            STM32-based Battery Management System for EVs with real-time monitoring, protection
+                            circuits, and data logging for safety and efficiency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">STM32</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">C++</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1eZzYwo9dJ_IuKDibzf6YglpDGZGlwILZ/view" target="_blank"
+                            class="text-blue-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View Details <i class="fas fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-cogs text-indigo-600 dark:text-indigo-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">VLSI Full Adder Design</h3>
+                <!-- Project 2 (VLSI) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="vlsi">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/1E3A8A/FFFFFF?text=Full+Adder" alt="VLSI Adder"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-indigo-100 text-indigo-700 rounded-full shadow-sm">VLSI</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">VLSI</span>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">8T, 10T, and 14T Full Adders in Cadence Virtuoso</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Designed and simulated three different full adder architectures: 8T, 10T, and 14T</li>
-                        <li>Conducted comprehensive analysis of power consumption, propagation delay, and area requirements</li>
-                        <li>Compared trade-offs between different transistor configurations for optimal performance</li>
-                        <li>Utilized Cadence Virtuoso for schematic design and simulation</li>
-                        <li>Focused on low-power and high-speed digital circuit design principles</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="https://github.com/farhan-efty/Analysis-of-8T-10T-and-14T-1-bit-full-adders-in-comparison" target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fab fa-github"></i> View on GitHub
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">
+                            VLSI Full Adder Design</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Designed and compared 8T, 10T, and 14T full adders in Cadence Virtuoso, analyzing power,
+                            delay, and area trade-offs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Cadence</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Virtuoso</span>
+                        </div>
+                        <a href="https://github.com/farhan-efty/Analysis-of-8T-10T-and-14T-1-bit-full-adders-in-comparison"
+                            target="_blank"
+                            class="text-indigo-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View on GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-robot text-red-600 dark:text-red-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Fire-Fighting Robot</h3>
+                <!-- Project 3 (Robotics) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="robotics embedded">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/EF4444/FFFFFF?text=Robot" alt="Fire Robot"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-red-100 text-red-700 rounded-full shadow-sm">Robotics</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Robotics</span>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Autonomous Arduino-based Robot</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Developed an autonomous robot using Arduino microcontroller platform</li>
-                        <li>Integrated flame sensors for fire detection and localization</li>
-                        <li>Implemented obstacle avoidance algorithms for safe navigation</li>
-                        <li>Designed extinguishing mechanism with water pump and nozzle system</li>
-                        <li>Demonstrated practical application in simulated emergency scenarios</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="https://github.com/farhan-efty/Fire-Fighting-Robot-using-Arduino" target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fab fa-github"></i> View on GitHub
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-red-600 transition-colors">
+                            Fire-Fighting Robot</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Autonomous Arduino-based robot with flame sensors and extinguishing mechanism, capable of
+                            navigating obstacles to locate fires.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Arduino</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">C++</span>
+                        </div>
+                        <a href="https://github.com/farhan-efty/Fire-Fighting-Robot-using-Arduino" target="_blank"
+                            class="text-red-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View on GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-plug text-yellow-600 dark:text-yellow-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Cable Fault Detection</h3>
+                <!-- Project 4 (Power) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="power embedded">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/EAB308/FFFFFF?text=Cable+Fault" alt="Cable Fault"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-yellow-100 text-yellow-700 rounded-full shadow-sm">Power</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Power</span>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Underground Cable Fault Detection System</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Designed Arduino-based system for detecting faults in underground power cables</li>
-                        <li>Applied Ohm's law principles to measure resistance and locate fault positions</li>
-                        <li>Implemented precise fault distance calculation algorithms</li>
-                        <li>Developed user interface for displaying fault location and type</li>
-                        <li>Aimed to reduce maintenance time and costs for electrical infrastructure</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="https://github.com/farhan-efty/Underground-Cable-Fault-Detection-Using-Arduino." target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fab fa-github"></i> View on GitHub
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-yellow-600 transition-colors">
+                            Cable Fault Detection</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Arduino-based system for detecting and locating faults in underground cables using Ohm's law
+                            principles with high precision.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">IoT</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Arduino</span>
+                        </div>
+                        <a href="https://github.com/farhan-efty/Underground-Cable-Fault-Detection-Using-Arduino."
+                            target="_blank"
+                            class="text-yellow-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View on GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 5 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-memory text-purple-600 dark:text-purple-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">8-bit Modified SAP</h3>
+                <!-- Project 5 (Architecture/VLSI) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="vlsi embedded">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/9333EA/FFFFFF?text=CPU" alt="SAP CPU"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-purple-100 text-purple-700 rounded-full shadow-sm">Arch</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Architecture</span>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Modified Simple As Possible CPU Architecture</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Designed a modified version of the Simple As Possible (SAP) computer architecture</li>
-                        <li>Focused on understanding fundamental building blocks of computer organization</li>
-                        <li>Implemented 8-bit data processing capabilities</li>
-                        <li>Explored instruction set design and execution cycles</li>
-                        <li>Gained insights into CPU architecture and digital system design</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="https://github.com/farhan-efty/8-Bit-Modified-SAP-Design" target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fab fa-github"></i> View on GitHub
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-purple-600 transition-colors">
+                            8-bit Modified SAP</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Designed a modified Simple As Possible (SAP) CPU architecture to demonstrate fundamental
+                            computer organization concepts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Proteus</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Logic
+                                Design</span>
+                        </div>
+                        <a href="https://github.com/farhan-efty/8-Bit-Modified-SAP-Design" target="_blank"
+                            class="text-purple-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View on GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="relative pl-8 md:pl-12 group">
-                    <span
-                        class="absolute -left-[9px] top-0 w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-slate-950 group-hover:bg-blue-500 transition-colors duration-300"></span>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-cog text-green-600 dark:text-green-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">BLDC Motor Controller</h3>
+                <!-- Project 6 (Control/Embedded) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden"
+                    data-category="embedded power">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400/16A34A/FFFFFF?text=Motor" alt="BLDC Motor"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 z-20">
+                            <span
+                                class="px-3 py-1 text-xs font-bold bg-green-100 text-green-700 rounded-full shadow-sm">Control</span>
                         </div>
-                        <span
-                            class="text-sm font-semibold text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-3 py-1 rounded-full mt-2 sm:mt-0 w-fit">Control</span>
                     </div>
-                    <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4 pl-[52px]">Brushless DC Motor Control System</h4>
-                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-disc list-outside ml-[68px]">
-                        <li>Designed and implemented a controller for Brushless DC (BLDC) motors</li>
-                        <li>Implemented electronic commutation logic for efficient motor operation</li>
-                        <li>Developed speed control algorithms with feedback mechanisms</li>
-                        <li>Integrated Hall effect sensors for rotor position sensing</li>
-                        <li>Focused on high-efficiency motor control for various applications</li>
-                    </ul>
-                    <div class="mt-4 pl-[52px]">
-                        <a href="#" class="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold rounded-full transition-colors">
-                            <i class="fas fa-external-link-alt"></i> View Project
+                    <div class="p-6">
+                        <h3
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-green-600 transition-colors">
+                            BLDC Motor Controller</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">
+                            Designed a controller for Brushless DC motors with electronic commutation logic and
+                            hall-effect sensor feedback.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Matlab</span>
+                            <span
+                                class="text-xs font-medium px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Simulink</span>
+                        </div>
+                        <a href="#"
+                            class="text-green-600 font-semibold text-sm hover:underline inline-flex items-center gap-1">
+                            View Details <i class="fas fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
             </div>
-        </div>
 
-        <div class="mt-16 text-center">
-            <a href="index.html"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm hover:shadow-md">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
-        </div>
+            <div class="mt-16 text-center">
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm hover:shadow-md">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer id="contact" class="bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-900">
+    <footer id="contact" class="bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-900 mt-auto">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 pb-12 border-b border-slate-800 items-center">
-
                 <!-- Contact Column -->
                 <div class="text-center md:text-left">
                     <h4 class="text-2xl font-bold text-white mb-6">Get in Touch</h4>
                     <ul class="space-y-4 text-base inline-block text-left">
                         <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-envelope text-white"></i>
                             </div>
                             <div>
                                 <p class="font-semibold text-white">Email</p>
                                 <p class="text-slate-400">farhanmuhibefty@gmail.com</p>
-                                <p class="text-slate-400">farhan.efty@adndiginet.com</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fab fa-whatsapp text-white"></i>
                             </div>
                             <div>
@@ -365,79 +429,77 @@
                                 <p class="text-slate-400">+880 1521 561 607</p>
                             </div>
                         </li>
-                        <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fab fa-facebook text-white"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-white">Facebook</p>
-                                <p class="text-slate-400">facebook.com/fmefty</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fab fa-instagram text-white"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-white">Instagram</p>
-                                <p class="text-slate-400">farhan__muhib</p>
-                            </div>
-                        </li>
                     </ul>
                 </div>
-
-                <!-- Social & Resources Column -->
+                <!-- Social Column -->
                 <div class="text-center md:text-left">
                     <h4 class="text-2xl font-bold text-white mb-6">Connect</h4>
-                    <p class="text-slate-400 mb-8 max-w-md mx-auto md:mx-0">
-                        Open for collaborations and interesting conversations about Technology and Business.
-                    </p>
-
-                    <div class="flex flex-col items-center md:items-start gap-6">
-                        <!-- Social Icons -->
-                        <div class="flex gap-4">
-                            <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener"
-                                class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-linkedin-in text-white"></i>
-                            </a>
-                            <a href="https://github.com/farhan-efty" target="_blank" rel="noopener" aria-label="GitHub"
-                                class="w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-github text-white"></i>
-                            </a>
-                            <a href="https://www.facebook.com/fmefty/" target="_blank" rel="noopener"
-                                class="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-facebook-f text-white"></i>
-                            </a>
-                            <a href="https://www.instagram.com/farhan__muhib/" target="_blank" rel="noopener"
-                                class="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-instagram text-white"></i>
-                            </a>
-                        </div>
-
-                        <!-- Resume Button -->
-                        <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"
-                            target="_blank" rel="noopener"
-                            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40">
-                            <i class="fas fa-file-arrow-down"></i> Download Resume
-                        </a>
+                    <div class="flex gap-4 justify-center md:justify-start mb-8">
+                        <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank"
+                            class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                        <a href="https://github.com/farhan-efty" target="_blank"
+                            class="w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center transition-colors"><i
+                                class="fab fa-github text-white"></i></a>
+                        <a href="https://www.facebook.com/fmefty/" target="_blank"
+                            class="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors"><i
+                                class="fab fa-facebook-f text-white"></i></a>
                     </div>
                 </div>
             </div>
-
             <div class="pt-8 text-center text-slate-500 text-sm">
                 <p>&copy; <span id="year"></span> Farhan Muhib Efty. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <button id="toTop" class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg"
+    <button id="toTop" class="fixed bottom-5 right-5 hidden rounded-full p-3 bg-blue-600 text-white shadow-lg z-50"
         aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <script>
+        // Project Filtering Logic
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button state
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(category)) {
+                    btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+                    btn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200', 'dark:bg-slate-800', 'dark:text-slate-300', 'dark:border-slate-700');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                    btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200', 'dark:bg-slate-800', 'dark:text-slate-300', 'dark:border-slate-700');
+                }
+            });
+
+            // Filter cards
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                if (category === 'all' || categories.includes(category)) {
+                    card.style.display = 'block';
+                    // Re-trigger animation
+                    card.classList.remove('animate-fade-in-up');
+                    void card.offsetWidth; // trigger reflow
+                    card.classList.add('animate-fade-in-up');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Stagger animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('animate-fade-in-up');
+            });
+        });
+
         // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
@@ -460,5 +522,4 @@
     </script>
 </body>
 
-</html></content>
-<parameter name="filePath">c:\Website\my-portfolio\project.html
+</html>
