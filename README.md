@@ -43,7 +43,7 @@ my-portfolio/
 - **Accents**: Multi-color scheme for different project categories (blue, indigo, red, yellow, purple, green)
 
 ### Key Sections & Pages
-1. **Home (`index.html`)**: Hero section with professional photo, About section, Professional Experience timeline (Trainee Engineer at ADN DigiNet), Technical Skills grid, Featured Projects (4 highlighted projects), Leadership roles preview, Education overview, Achievements, and Contact footer.
+1. **Home (`index.html`)**: Hero section with professional photo, About section, Professional Experience timeline (Trainee Engineer at ADN SEMICONDUCTORS), Technical Skills grid, Featured Projects (4 highlighted projects), Leadership roles preview, Education overview, Achievements, and Contact footer.
 
 2. **Projects (`project.html`)**: Comprehensive project showcase with 6 technical projects including:
    - Intelligent BMS (Thesis) - STM32-based Battery Management System

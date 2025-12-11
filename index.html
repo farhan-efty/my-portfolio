@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Farhan Muhib Efty – Portfolio</title>
     <meta name="description"
-        content="Portfolio of Farhan Muhib Efty — Trainee Engineer at ADN DigiNet and EEE graduate. Projects in VLSI, embedded systems, and power electronics." />
+        content="Portfolio of Farhan Muhib Efty — Trainee Engineer at ADN SEMICONDUCTORS and EEE graduate. Projects in VLSI, embedded systems, and power electronics." />
     <meta name="author" content="Farhan Muhib Efty" />
     <meta property="og:title" content="Farhan Muhib Efty – Portfolio" />
     <meta property="og:description"
@@ -118,6 +118,22 @@
         .collapsible:focus-within .chev {
             transform: rotate(180deg);
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
     </style>
 </head>
 
@@ -137,7 +153,8 @@
                 <a href="#experience"
                     class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Experiences</a>
                 <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Skills</a>
-                <a href="project.html" class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Projects</a>
+                <a href="project.html"
+                    class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Projects</a>
                 <a href="leadership.html"
                     class="nav-link text-slate-600 dark:text-slate-300 hover:text-blue-600">Leadership</a>
                 <a href="education.html"
@@ -184,9 +201,12 @@
                 </div>
 
                 <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Farhan Muhib Efty</h1>
-                <p class="text-xl md:text-2xl font-light text-blue-100 mb-2">Trainee Engineer - Semiconductor
-                    Engineering</p>
-                <p class="text-blue-200 font-medium tracking-wide uppercase text-sm">ADN DigiNet</p>
+                <p class="text-xl md:text-2xl font-light text-blue-100 mb-2">Trainee Engineer – RTL Design and
+                    Verification Department</p>
+                <div class="mt-2">
+                    <span class="block text-xl md:text-2xl font-extrabold tracking-wide text-blue-100 uppercase"
+                        style="letter-spacing:0.04em;"><strong>ADN SEMICONDUCTORS</strong></span>
+                </div>
 
                 <div class="mt-10 flex justify-center gap-5">
                     <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" rel="noopener"
@@ -205,35 +225,132 @@
 
         <!-- About Section -->
         <!-- About Section -->
-        <section id="about" class="py-20 bg-white dark:bg-slate-900">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="section-title">About Me</h2>
-                    <div class="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
-                        <p>👋 Hello! I'm <strong>Farhan Muhib Efty</strong>, an Electrical and Electronic Engineering
-                            graduate from
-                            Ahsanullah University of Science and Technology, currently working as a Trainee Engineer –
-                            Semiconductor
-                            Engineering at ADN DigiNet Company.</p>
-                        <p>💻 My core focus is on <strong>VLSI Design Verification (DV)</strong>. I am building
-                            expertise in
-                            SystemVerilog, UVM, and RTL, while utilizing modern development tools like VS Code, Git
-                            Bash, and
-                            Makefiles to streamline verification workflows.</p>
-                        <p>🌟 Driven by the challenge of "silicon perfection," I am dedicated to continuous learning in
-                            semiconductor technologies. I aim to combine technical precision with strong problem-solving
-                            skills to
-                            contribute to complex verification projects.</p>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-slate-900 relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div
+                class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center justify-center gap-3">
+                        <span
+                            class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                            <i class="fas fa-user text-xl"></i>
+                        </span>
+                        <h2 class="section-title mb-0">About Me</h2>
                     </div>
                 </div>
-                <div class="relative max-w-md mx-auto">
-                    <div class="absolute inset-0 bg-blue-600 rounded-2xl rotate-3 opacity-10"></div>
-                    <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1600"
-                        alt="Professional headshot"
-                        class="relative rounded-2xl shadow-2xl w-full object-cover transform -rotate-3 hover:rotate-0 transition duration-500"
-                        loading="lazy" referrerpolicy="no-referrer"
-                        onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+
+                <!-- Bento Grid Layout -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+
+                    <!-- Tile 1: Main Intro (Span 2 Cols) -->
+                    <div class="md:col-span-2 relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative h-full bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 hover:border-blue-500/30 transition-all duration-500 hover:-translate-y-2 shadow-sm group overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10 h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div
+                                            class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg shadow-lg shadow-blue-600/20 group-hover:scale-110 transition-transform duration-300">
+                                            <i class="fas fa-user-tie"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Professional
+                                            Background</h3>
+                                    </div>
+                                    <p
+                                        class="text-slate-600 dark:text-slate-300 text-base leading-relaxed text-justify">
+                                        I'm <strong>Farhan Muhib Efty</strong>, an Electrical and Electronic Engineering
+                                        graduate and currently a <strong>Trainee Engineer</strong> at <strong>ADN
+                                            SEMICONDUCTORS</strong>.
+                                    </p>
+                                    <p
+                                        class="text-slate-600 dark:text-slate-300 mt-3 leading-relaxed text-sm text-justify">
+                                        My journey is defined by a passion for silicon perfection. Working in the RTL
+                                        Design
+                                        and Verification department, I bridge the gap between theoretical architecture
+                                        and
+                                        practical, robust implementation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 2: Image (Span 1 Row, but tall) -->
+                    <div
+                        class="md:row-span-2 relative rounded-2xl overflow-hidden min-h-[300px] border border-slate-200 dark:border-slate-700 shadow-sm group">
+                        <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w800"
+                            alt="Farhan Muhib Efty"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik'" />
+                    </div>
+
+                    <!-- Tile 3: Expertise -->
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 hover:border-indigo-500/30 transition-all duration-500 hover:-translate-y-2 shadow-sm group overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div
+                                        class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-lg shadow-lg shadow-indigo-600/20 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-microchip"></i>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Technical Focus</h3>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm text-justify">
+                                    Specializing in <strong>VLSI Design Verification (DV)</strong> using SystemVerilog
+                                    and UVM to ensure bug-free chip designs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tile 4: Vision -->
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2 shadow-sm group overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div
+                                        class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-lg shadow-lg shadow-purple-600/20 group-hover:scale-110 transition-transform duration-300">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Vision</h3>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm text-justify">
+                                    Aiming to tackle complex verification challenges and contribute to next-gen
+                                    semiconductor technologies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -241,46 +358,57 @@
         <!-- Experience Section -->
         <section id="experience" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title w-full flex items-center justify-center gap-3"><i
+                        class="fas fa-briefcase text-blue-600 dark:text-blue-400"></i> Professional Experience</h2>
                 <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
 
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Trainee
-                                        Engineer</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">ADN DigiNet</p>
-                                    <p class="text-sm text-slate-500 mt-1">Semiconductor Engineering Department</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Sep 2025 – Present</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul <ul
-                                    class="mt-4 space-y-3 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li><strong>VLSI & Verification Training:</strong> Actively training in
-                                        semiconductor fabrication
-                                        processes and Design Verification (DV) methodologies, with a specific emphasis
-                                        on SystemVerilog and
-                                        UVM testbench architectures.</li>
-                                    <li><strong>Simulation & Tools:</strong> Assisting with circuit layout, simulation,
-                                        and verification
-                                        using industry-standard EDA tools; utilizing VS Code, Git Bash, and Makefiles
-                                        for efficient code
-                                        development and version control.</li>
-                                    <li><strong>Debugging & Analysis:</strong> Analyzing test data to identify design
-                                        anomalies and
-                                        supporting the debugging process to ensure robust functionality before tapeout.
-                                    </li>
-                                </ul>
+                            <div class="relative card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">
+                                                Trainee
+                                                Engineer</h3>
+                                            <p class="text-sm text-slate-500 mt-1 font-bold">RTL Design and Verification
+                                                Department</p>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">ADN SEMICONDUCTORS
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-slate-50 dark:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>Sep 2025 – Present</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-3 text-slate-600 dark:text-slate-300 font-medium list-disc list-outside ml-5 marker:text-blue-500">
+                                            <li><strong>VLSI & Verification Training:</strong> Developing expertise in
+                                                Design Verification (DV) methodologies, with a strong focus on
+                                                constructing advanced testbench architectures using SystemVerilog and
+                                                UVM.</li>
+                                            <li><strong>Simulation & Tools:</strong> Utilizing industry-standard EDA
+                                                tools for circuit simulation and verification, while optimizing
+                                                development workflows through VS Code, Git Bash, and Makefiles.</li>
+                                            <li><strong>Debugging & Analysis:</strong> Performing rigorous analysis of
+                                                simulation data to identify design anomalies and supporting the
+                                                debugging process to ensure functional correctness prior to tapeout.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -293,9 +421,10 @@
         <!-- Skills Section -->
         <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900/50">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-center w-full">Technical Expertise</h2>
+                <h2 class="section-title text-center w-full flex justify-center items-center gap-3"><i
+                        class="fas fa-laptop-code text-blue-600 dark:text-blue-400"></i> Technical Expertise</h2>
 
-                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fadeInUp">
                     <!-- Technical Skills -->
                     <div>
                         <h3 class="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
@@ -305,58 +434,70 @@
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fab fa-cuttlefish fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fab fa-cuttlefish fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">C/C++</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fab fa-python fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fab fa-python fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Python</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-database fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fas fa-database fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">SQL</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Cadence</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-code-branch fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
-                                <span class="font-medium text-sm">Verilog</span>
+                                    class="fas fa-code-branch fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
+                                <span class="font-medium text-sm">SystemVerilog</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-stream fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fas fa-stream fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">RTL</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-cogs fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fas fa-cogs fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Quartus</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fab fa-linux fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fab fa-linux fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Linux</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-colors"></i>
+                                    class="fas fa-microchip fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">STM32</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                <i
+                                    class="fas fa-chart-line fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
+                                <span class="font-medium text-sm">Power BI</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                <i
+                                    class="fas fa-chart-bar fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110"></i>
+                                <span class="font-medium text-sm">Tableau</span>
                             </div>
                         </div>
                     </div>
@@ -376,34 +517,40 @@
                                 <span class="font-medium text-sm">Leadership</span>
                             </a>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-clock fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                    class="fas fa-clock fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Time Management</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-lightbulb fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                    class="fas fa-lightbulb fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Problem Solving</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fas fa-brain fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                    class="fas fa-brain fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Critical Thinking</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fa-solid fa-pen-nib fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                    class="fa-solid fa-pen-nib fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Design Tools</span>
                             </div>
                             <div
-                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group">
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <i
-                                    class="fa-solid fa-file-word fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
+                                    class="fa-solid fa-file-word fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                 <span class="font-medium text-sm">Office Suite</span>
+                            </div>
+                            <div
+                                class="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                <i
+                                    class="fas fa-chart-pie fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
+                                <span class="font-medium text-sm">Analytical Ability</span>
                             </div>
                         </div>
                     </div>
@@ -416,104 +563,155 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-10">
                     <div class="inline-flex items-center justify-center gap-3 animate-fadeInUp">
-                        <span class="inline-block w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-md">
+                        <span
+                            class="inline-block w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-md">
                             <i class="fas fa-star text-xl"></i>
                         </span>
                         <h2 class="section-title mb-0 font-extrabold">Featured Projects</h2>
                     </div>
-                    <p class="mt-4 text-lg font-bold text-slate-700 dark:text-slate-200 animate-fadeInUp">Highlights from my technical work</p>
+                    <p class="mt-4 text-lg font-bold text-slate-700 dark:text-slate-200 animate-fadeInUp">Highlights
+                        from my technical work</p>
                     <!-- Removed upper View All Projects button as requested -->
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
                     <!-- Project 1 -->
-                    <article
-                        class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                        <div class="p-5">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-microchip text-lg"></i>
-                                </div>
-                                <span class="px-2.5 py-1 text-xs font-semibold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full">Thesis</span>
+                    <article class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
                             </div>
-                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
-                                Intelligent BMS</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
-                                STM32-based Battery Management System for EVs with real-time monitoring and protection.
-                            </p>
-                            <a href="https://drive.google.com/file/d/1eZzYwo9dJ_IuKDibzf6YglpDGZGlwILZ/view"
-                                target="_blank" rel="noopener"
-                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
-                                View Project <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
+                            <div class="relative z-10 p-5">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-microchip text-lg"></i>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-semibold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full">Thesis</span>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                    Intelligent BMS</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                                    STM32-based Battery Management System for EVs with real-time monitoring and
+                                    protection.
+                                </p>
+                                <a href="https://drive.google.com/file/d/1eZzYwo9dJ_IuKDibzf6YglpDGZGlwILZ/view"
+                                    target="_blank" rel="noopener"
+                                    class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Project 2 -->
-                    <article
-                        class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:border-indigo-500/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                        <div class="p-5">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-chip text-lg"></i>
-                                </div>
-                                <span class="px-2.5 py-1 text-xs font-semibold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-full">VLSI</span>
+                    <article class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-full">
                             </div>
-                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
-                                Full Adder Design</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
-                                Designed 8T, 10T, and 14T full adders in Cadence. Analyzed power, delay, and area trade-offs.
-                            </p>
-                            <a href="https://github.com/farhan-efty/Analysis-of-8T-10T-and-14T-1-bit-full-adders-in-comparison"
-                                target="_blank" rel="noopener"
-                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
-                                View Project <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
+                            <div class="relative z-10 p-5">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-microchip text-lg"></i>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-semibold bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-full">VLSI</span>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                    Full Adder Design</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                                    Designed 8T, 10T, and 14T full adders in Cadence. Analyzed power, delay, and area
+                                    trade-offs.
+                                </p>
+                                <a href="https://github.com/farhan-efty/Analysis-of-8T-10T-and-14T-1-bit-full-adders-in-comparison"
+                                    target="_blank" rel="noopener"
+                                    class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
                     <!-- Project 3 -->
-                    <article
-                        class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:border-red-500/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                        <div class="p-5">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-robot text-lg"></i>
-                                </div>
-                                <span class="px-2.5 py-1 text-xs font-semibold bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full">Robotics</span>
+                    <article class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-500/10 to-transparent rounded-bl-full">
                             </div>
-                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
-                                Fire-Fighting Robot</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
-                                Autonomous Arduino robot with flame sensors and extinguishing mechanism for fire detection.
-                            </p>
-                            <a href="https://github.com/farhan-efty/Fire-Fighting-Robot-using-Arduino" target="_blank"
-                                rel="noopener"
-                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
-                                View Project <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
+                            <div class="relative z-10 p-5">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-robot text-lg"></i>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-semibold bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full">Robotics</span>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                    Fire-Fighting Robot</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                                    Autonomous Arduino robot with flame sensors and extinguishing mechanism for fire
+                                    detection.
+                                </p>
+                                <a href="https://github.com/farhan-efty/Fire-Fighting-Robot-using-Arduino"
+                                    target="_blank" rel="noopener"
+                                    class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
                     <!-- Project 4 -->
-                    <article
-                        class="group bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:shadow-lg hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                        <div class="p-5">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
-                                    <i class="fas fa-microchip text-lg"></i>
-                                </div>
-                                <span class="px-2.5 py-1 text-xs font-semibold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full">Architecture</span>
+                    <article class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full">
                             </div>
-                            <h3 class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
-                                8-bit Modified SAP</h3>
-                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
-                                Designed a modified SAP CPU architecture. Focused on understanding the building blocks of computer organization.
-                            </p>
-                            <a href="https://github.com/farhan-efty/8-Bit-Modified-SAP-Design" target="_blank"
-                                rel="noopener"
-                                class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
-                                View Project <i class="fas fa-arrow-right text-xs"></i>
-                            </a>
+                            <div class="relative z-10 p-5">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-microchip text-lg"></i>
+                                    </div>
+                                    <span
+                                        class="px-2.5 py-1 text-xs font-semibold bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full">Architecture</span>
+                                </div>
+                                <h3
+                                    class="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                                    8-bit Modified SAP</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                                    Designed a modified SAP CPU architecture. Focused on understanding the building
+                                    blocks
+                                    of computer organization.
+                                </p>
+                                <a href="https://github.com/farhan-efty/8-Bit-Modified-SAP-Design" target="_blank"
+                                    rel="noopener"
+                                    class="inline-flex items-center text-blue-600 font-semibold text-sm hover:gap-2 gap-1 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -531,7 +729,8 @@
         <section id="leadership" class="py-20 bg-white dark:bg-slate-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="section-title mb-0 flex justify-center items-center">Leadership & Volunteering</h2>
+                    <h2 class="section-title mb-0 flex justify-center items-center gap-3"><i
+                            class="fas fa-users text-blue-600 dark:text-blue-400"></i> Leadership & Volunteering</h2>
                 </div>
                 <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 md:ml-6 space-y-12">
 
@@ -539,42 +738,59 @@
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Membership Development
-                                        Coordinator</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE Young Professionals
-                                        Bangladesh</p>
-                                    <p class="text-sm text-slate-500 mt-1">Executive Member</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>May 2025 – Present</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul
-                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li>Collaborated with multiple IEEE Student Branches nationwide to co-host
-                                        YP-focused programs and
-                                        outreach.</li>
-                                    <li>Worked on flagship initiatives: <strong>YPCon 2025</strong>, <strong>IEEE YP
-                                            Talk Series</strong>,
-                                        and <strong>IEEE Region 10 YP UpSkill – Bangladesh 2025</strong>.</li>
-                                    <li>Moderated the UpSkill 2025 <em>Networking Session</em> at AUST alongside Md Abu
-                                        Saleh, fostering
-                                        meaningful professional connections.</li>
-                                    <li>Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic
-                                        learning with
-                                        industry-ready skills.</li>
-                                    <li>Drove engagement campaigns and post-event follow-ups to convert attendees into
-                                        active YP members.
-                                    </li>
-                                </ul>
+                            <div class="relative card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Membership
+                                                Development
+                                                Coordinator</h3>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE Young
+                                                Professionals
+                                                Bangladesh</p>
+                                            <p class="text-sm text-slate-500 mt-1">Executive Member</p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>May 2025 – Present</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                            <li>Collaborated with multiple IEEE Student Branches nationwide to co-host
+                                                YP-focused programs and
+                                                outreach.</li>
+                                            <li>Worked on flagship initiatives: <strong>YPCon 2025</strong>,
+                                                <strong>IEEE YP
+                                                    Talk Series</strong>,
+                                                and <strong>IEEE Region 10 YP UpSkill – Bangladesh 2025</strong>.
+                                            </li>
+                                            <li>Moderated the UpSkill 2025 <em>Networking Session</em> at AUST alongside
+                                                Md Abu
+                                                Saleh, fostering
+                                                meaningful professional connections.</li>
+                                            <li>Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge
+                                                academic
+                                                learning with
+                                                industry-ready skills.</li>
+                                            <li>Drove engagement campaigns and post-event follow-ups to convert
+                                                attendees into
+                                                active YP members.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -583,35 +799,52 @@
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chairperson</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE AUST Student Branch</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Feb 2023 – Feb 2024</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul
-                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li>Led 57 officers; managed operations, social media, and website to support record
-                                        program delivery.
-                                    </li>
-                                    <li>Hosted two national competitions and one intra-university competition with
-                                        strong
-                                        industry-academic participation.</li>
-                                    <li>Achieved the branch’s highest membership and event count since inception.</li>
-                                    <li>Launched a refreshed branch website and opened a new chapter during tenure.</li>
-                                    <li>Collaborated with IEEE Bangladesh Section and IEEE YP on a conference and joint
-                                        technical events.
-                                    </li>
-                                </ul>
+                            <div class="relative card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Chairperson
+                                            </h3>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE AUST Student
+                                                Branch</p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>Feb 2023 – Feb 2024</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                            <li>Led 57 officers; managed operations, social media, and website to
+                                                support record
+                                                program delivery.
+                                            </li>
+                                            <li>Hosted two national competitions and one intra-university competition
+                                                with
+                                                strong
+                                                industry-academic participation.</li>
+                                            <li>Achieved the branch’s highest membership and event count since
+                                                inception.</li>
+                                            <li>Launched a refreshed branch website and opened a new chapter during
+                                                tenure.</li>
+                                            <li>Collaborated with IEEE Bangladesh Section and IEEE YP on a conference
+                                                and joint
+                                                technical events.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -620,36 +853,51 @@
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Joint Secretary</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">AUST Innovation & Design
-                                        Club</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Dec 2022 – May 2023</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul
-                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li>Operations Lead for <strong>Mindsparks’22</strong> engaging 1200+ participants
-                                        from 30+
-                                        institutions.</li>
-                                    <li>Recruited and mentored 63 juniors; achieved top revenue & sign-ups during Club
-                                        Fair.</li>
-                                    <li>Coordinated <strong>Mindsparks’23</strong> and curated events like
-                                        <em>Innoventure 21</em> and
-                                        <em>Cognibat 21</em>.
-                                    </li>
-                                    <li>Oversaw event management, logistics, and promotional design assets.</li>
-                                    <li>Strengthened cross-club collaboration for innovation-centric programs.</li>
-                                </ul>
+                            <div class="relative card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Joint Secretary
+                                            </h3>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">AUST Innovation &
+                                                Design
+                                                Club</p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>Dec 2022 – May 2023</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                            <li>Operations Lead for <strong>Mindsparks’22</strong> engaging 1200+
+                                                participants
+                                                from 30+
+                                                institutions.</li>
+                                            <li>Recruited and mentored 63 juniors; achieved top revenue & sign-ups
+                                                during Club
+                                                Fair.</li>
+                                            <li>Coordinated <strong>Mindsparks’23</strong> and curated events like
+                                                <em>Innoventure 21</em> and
+                                                <em>Cognibat 21</em>.
+                                            </li>
+                                            <li>Oversaw event management, logistics, and promotional design assets.</li>
+                                            <li>Strengthened cross-club collaboration for innovation-centric programs.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -658,35 +906,51 @@
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Vice Chair</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE PES, AUST Student
-                                        Branch Chapter</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Mar 2022 – Feb 2023</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul
-                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li>Organized technical seminars, webinars, and member engagement sessions under
-                                        IEEE PES.</li>
-                                    <li>Contributed to securing the <strong>High-Performance Student Branch Chapter
-                                            Award</strong>.</li>
-                                    <li>Served as IEEE PES Day Ambassador and managed chapter social media presence.
-                                    </li>
-                                    <li>Executed joint programs with other SB chapters to promote power & energy topics.
-                                    </li>
-                                    <li>Supported volunteer onboarding and role-specific training for new coordinators.
-                                    </li>
-                                </ul>
+                            <div class="relative card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Vice Chair</h3>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">IEEE PES, AUST
+                                                Student
+                                                Branch Chapter</p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>Mar 2022 – Feb 2023</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                            <li>Organized technical seminars, webinars, and member engagement sessions
+                                                under
+                                                IEEE PES.</li>
+                                            <li>Contributed to securing the <strong>High-Performance Student Branch
+                                                    Chapter
+                                                    Award</strong>.</li>
+                                            <li>Served as IEEE PES Day Ambassador and managed chapter social media
+                                                presence.
+                                            </li>
+                                            <li>Executed joint programs with other SB chapters to promote power & energy
+                                                topics.
+                                            </li>
+                                            <li>Supported volunteer onboarding and role-specific training for new
+                                                coordinators.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -695,36 +959,52 @@
                     <div class="relative pl-8 md:pl-12">
                         <span
                             class="absolute -left-[9px] top-0 h-5 w-5 rounded-full border-4 border-white dark:border-slate-900 bg-blue-600"></span>
-                        <div class="card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700"
-                            tabindex="0">
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Assistant Organizing
-                                        Secretary</h3>
-                                    <p class="text-blue-600 dark:text-blue-400 font-medium">AUST EEE Society</p>
-                                </div>
-                                <div
-                                    class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>Nov 2021 – May 2022</span>
-                                    <i class="fa-solid fa-chevron-down chev ml-2"></i>
-                                </div>
+                        <div class="relative group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                             </div>
-                            <div class="content">
-                                <ul
-                                    class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
-                                    <li>Coordinated departmental workshops, seminars, and student development programs.
-                                    </li>
-                                    <li>Planned and executed flagship events including <strong>AUST EEE DAY</strong>,
-                                        sports week, and the
-                                        picnic “Tridib Ucchash.”</li>
-                                    <li>Organized a <strong>Three-Minute Thesis</strong> presentation program for EEE
-                                        students.</li>
-                                    <li>Contributed as a volunteer to <strong>Tech Fiesta</strong> and other outreach
-                                        activities.</li>
-                                    <li>Handled logistics, vendor coordination, and communications for smooth event
-                                        delivery.</li>
-                                </ul>
+                            <div class="relative card collapsible bg-slate-50 dark:bg-slate-800 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+                                tabindex="0">
+                                <div
+                                    class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                                </div>
+                                <div class="relative z-10">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Assistant
+                                                Organizing
+                                                Secretary</h3>
+                                            <p class="text-blue-600 dark:text-blue-400 font-medium">AUST EEE Society</p>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>Nov 2021 – May 2022</span>
+                                            <i class="fa-solid fa-chevron-down chev ml-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <ul
+                                            class="mt-4 space-y-2 text-slate-600 dark:text-slate-300 list-disc list-inside marker:text-blue-500">
+                                            <li>Coordinated departmental workshops, seminars, and student development
+                                                programs.
+                                            </li>
+                                            <li>Planned and executed flagship events including <strong>AUST EEE
+                                                    DAY</strong>,
+                                                sports week, and the
+                                                picnic “Tridib Ucchash.”</li>
+                                            <li>Organized a <strong>Three-Minute Thesis</strong> presentation program
+                                                for EEE
+                                                students.</li>
+                                            <li>Contributed as a volunteer to <strong>Tech Fiesta</strong> and other
+                                                outreach
+                                                activities.</li>
+                                            <li>Handled logistics, vendor coordination, and communications for smooth
+                                                event
+                                                delivery.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -741,66 +1021,125 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="py-20">
+        <section id="education"
+            class="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-center mb-12 flex justify-center items-center">Education</h2>
-                <div class="grid md:grid-cols-3 gap-8 justify-center">
-                    <div
-                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                <h2 class="section-title text-center mb-16 flex justify-center items-center gap-3"><i
+                        class="fas fa-graduation-cap text-blue-600 dark:text-blue-400"></i> Education</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Bachelor's Degree -->
+                    <div class="relative group">
                         <div
-                            class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                            class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">B.Sc. in Electrical and
-                            Electronic
-                            Engineering</h3>
-                        <p class="text-blue-600 dark:text-blue-400 font-medium text-sm mb-4">Ahsanullah University of
-                            Science and
-                            Technology</p>
                         <div
-                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
-                            <span>2019 – 2023</span>
-                            <span class="font-semibold text-slate-700 dark:text-slate-300">CGPA: 3.475/4.00</span>
+                            class="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                                </div>
+                                <div class="mb-6">
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+                                        B.Sc. in Electrical and Electronic Engineering</h3>
+                                    <p class="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1">Ahsanullah
+                                        University of Science and Technology</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <i class="fa-solid fa-calendar-days text-blue-500"></i>
+                                        <span class="font-medium">2019 – 2023</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-award text-blue-500"></i>
+                                        <span class="text-sm font-bold text-slate-800 dark:text-slate-200">CGPA: <span
+                                                class="text-blue-600 dark:text-blue-400">3.475/4.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                    <!-- HSC -->
+                    <div class="relative group">
                         <div
-                            class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-school text-xl"></i>
+                            class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Higher Secondary Certificate
-                            (HSC)</h3>
-                        <p class="text-indigo-600 dark:text-indigo-400 font-medium text-sm mb-4">Dhaka City College</p>
                         <div
-                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
-                            <span>2016 – 2018</span>
-                            <span class="font-semibold text-slate-700 dark:text-slate-300">GPA: 5.00/5.00</span>
+                            class="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                    <i class="fa-solid fa-school text-2xl"></i>
+                                </div>
+                                <div class="mb-6">
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+                                        Higher Secondary Certificate (HSC)</h3>
+                                    <p class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm mb-1">Dhaka
+                                        City College</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <i class="fa-solid fa-calendar-days text-indigo-500"></i>
+                                        <span class="font-medium">2016 – 2018</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-award text-indigo-500"></i>
+                                        <span class="text-sm font-bold text-slate-800 dark:text-slate-200">GPA: <span
+                                                class="text-indigo-600 dark:text-indigo-400">5.00/5.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all duration-300 group">
+                    <!-- SSC -->
+                    <div class="relative group">
                         <div
-                            class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-book-open text-xl"></i>
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Secondary School Certificate
-                            (SSC)</h3>
-                        <p class="text-purple-600 dark:text-purple-400 font-medium text-sm mb-4">Gobindaganj Govt. High
-                            School</p>
                         <div
-                            class="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 dark:border-slate-800 pt-4">
-                            <span>2016</span>
-                            <span class="font-semibold text-slate-700 dark:text-slate-300">GPA: 5.00/5.00</span>
+                            class="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <div class="relative z-10">
+                                <div
+                                    class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                    <i class="fa-solid fa-book-open text-2xl"></i>
+                                </div>
+                                <div class="mb-6">
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+                                        Secondary School Certificate (SSC)</h3>
+                                    <p class="text-purple-600 dark:text-purple-400 font-semibold text-sm mb-1">
+                                        Gobindaganj Govt. High School</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                        <i class="fa-solid fa-calendar-days text-purple-500"></i>
+                                        <span class="font-medium">2016</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-award text-purple-500"></i>
+                                        <span class="text-sm font-bold text-slate-800 dark:text-slate-200">GPA: <span
+                                                class="text-purple-600 dark:text-purple-400">5.00/5.00</span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-12">
-                    <a href="education.html" class="inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300 animate-fadeInUp">
-                        View Detailed Timeline
-                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                <div class="flex justify-center mt-16">
+                    <a href="education.html"
+                        class="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <span>View Detailed Timeline</span>
+                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-2 duration-300"></i>
                     </a>
                 </div>
             </div>
@@ -809,14 +1148,30 @@
         <!-- Achievements Section -->
         <section id="achievements" class="py-20 bg-slate-50 dark:bg-slate-900/50">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-center mb-12 flex justify-center items-center">Achievements</h2>
-                <div class="max-w-5xl mx-auto flex flex-col items-center space-y-6">
+                <h2 class="section-title text-center mb-12 flex justify-center items-center gap-3"><i
+                        class="fas fa-trophy text-blue-600 dark:text-blue-400"></i> Achievements</h2>
+                <div class="max-w-5xl mx-auto flex flex-col items-center space-y-6 animate-fadeInUp">
                     <!-- Achievement 1 -->
-                    <div class="card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-6 w-full max-w-4xl">
-                        <span class="flex items-center justify-center h-14 w-14 rounded-full bg-yellow-100 dark:bg-yellow-900/20"><i class="fa-solid fa-trophy text-yellow-500 text-3xl"></i></span>
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Outstanding Contribution Award (2022)</h3>
-                            <p class="text-slate-600 dark:text-slate-300">Recognized for outstanding contributions and leadership in the IEEE AUST Student Branch.</p>
+                    <div class="relative group w-full max-w-4xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="relative card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex items-center gap-6 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-bl-full">
+                            </div>
+                            <span
+                                class="relative z-10 flex items-center justify-center h-14 w-14 rounded-full bg-yellow-100 dark:bg-yellow-900/20"><i
+                                    class="fa-solid fa-trophy text-yellow-500 text-3xl"></i></span>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Outstanding
+                                    Contribution
+                                    Award (2022)</h3>
+                                <p class="text-slate-600 dark:text-slate-300">Recognized for outstanding contributions
+                                    and
+                                    leadership in the IEEE AUST Student Branch.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Add more achievements below as needed -->
@@ -987,6 +1342,21 @@
             const a = document.createElement('a'); a.href = url; a.target = '_top'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
             setTimeout(() => { scrollToSection('home'); }, 50);
         });
+
+        // Animation Observer
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            animationObserver.observe(el);
+        });
     </script>
 
     <!-- Schema -->
@@ -996,7 +1366,7 @@
     "@type": "Person",
     "name": "Farhan Muhib Efty",
     "jobTitle": "Trainee Engineer",
-    "affiliation": {"@type": "Organization", "name": "ADN DigiNet"},
+    "affiliation": {"@type": "Organization", "name": "ADN SEMICONDUCTORS"},
     "email": ["mailto:farhanmuhibefty@gmail.com", "mailto:farhan.efty@adndiginet.com"],
     "telephone": ["+8801521561607", "+8801329665865"],
     "sameAs": [
