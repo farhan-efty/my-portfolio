@@ -2,8 +2,7 @@
 export default {
     content: [
         "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
-        "./*.{js,jsx}",
+        "./{App,main,Home,Navbar,Footer,Contact,Education,Experience,Leadership,Projects,Skills}.jsx",
     ],
     darkMode: 'class',
     theme: {
