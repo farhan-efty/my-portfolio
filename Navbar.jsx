@@ -1,9 +1,40 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleAboutClick = (event) => {
+        event.preventDefault();
+
+        const scrollToAbout = () => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        if (location.pathname === '/' || location.pathname === '/index.html') {
+            scrollToAbout();
+        } else {
+            navigate('/', { state: { scrollTo: 'about' } });
+        }
+
+        setIsMobileMenuOpen(false);
+    };
+
+    const reloadIfOnHome = (event) => {
+        // If already on the home route, reload the page
+        if (location.pathname === '/' || location.pathname === '/index.html') {
+            event.preventDefault();
+            window.location.reload();
+        } else {
+            // On other pages, just close the mobile menu (Link will navigate to home)
+            setIsMobileMenuOpen(false);
+        }
+    };
 
     // Helper to check if link is active
     const isActive = (path) => {
@@ -20,14 +51,30 @@ const Navbar = () => {
                 }
             `}</style>
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <Link to="/" className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white group">
+                <Link
+                    to="/"
+                    onClick={reloadIfOnHome}
+                    className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white group"
+                >
                     Farhan<span className="text-primary-600 group-hover:text-primary-500 transition-colors">.</span>
                 </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link to="/" className={`nav-link text-sm font-medium transition-colors ${isActive('/')}`}>Home</Link>
-                    <a href="/#about" className="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <Link
+                        to="/"
+                        onClick={reloadIfOnHome}
+                        className={`nav-link text-sm font-medium transition-colors ${isActive('/')}`}
+                    >
+                        Home
+                    </Link>
+                    <a
+                        href="#about"
+                        onClick={handleAboutClick}
+                        className="nav-link text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                        About
+                    </a>
                     <Link to="/experience" className={`nav-link text-sm font-medium transition-colors ${isActive('/experience')}`}>Experience</Link>
                     <Link to="/skills" className={`nav-link text-sm font-medium transition-colors ${isActive('/skills')}`}>Skills</Link>
                     <Link to="/projects" className={`nav-link text-sm font-medium transition-colors ${isActive('/projects')}`}>Projects</Link>
@@ -53,8 +100,20 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 absolute w-full ${isMobileMenuOpen ? '' : 'hidden'}`} id="mobile-menu">
                 <div className="flex flex-col p-6 space-y-4">
-                    <Link to="/" className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Home</Link>
-                    <a href="/#about" className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
+                    <Link
+                        to="/"
+                        onClick={reloadIfOnHome}
+                        className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                    >
+                        Home
+                    </Link>
+                    <a
+                        href="#about"
+                        onClick={handleAboutClick}
+                        className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                    >
+                        About
+                    </a>
                     <Link to="/experience" className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</Link>
                     <Link to="/skills" className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</Link>
                     <Link to="/projects" className="text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</Link>

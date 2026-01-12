@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
     const [theme, setTheme] = useState('light');
+    const location = useLocation();
 
     useEffect(() => {
         // Theme initialization
@@ -23,7 +24,7 @@ const Home = () => {
         let typingTimeout;
 
         if (textElement) {
-            const texts = ["Assistant Engineer", "RTL Design Engineer", "Design Verification Engineer", "VLSI Enthusiast"];
+            const texts = ["Assistant Engineer", "RTL Design & Verification", "Team Player", "Tech & Business Enthusiast"];
             let textIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
@@ -39,7 +40,7 @@ const Home = () => {
                     charIndex++;
                 }
 
-                let typeSpeed = 100; // Slower typing
+                let typeSpeed = 75; // Slower typing
 
                 if (isDeleting) {
                     typeSpeed = 50; // Slower deleting
@@ -90,6 +91,19 @@ const Home = () => {
         };
 
     }, []);
+
+    useEffect(() => {
+        if (location.state && location.state.scrollTo) {
+            const targetId = location.state.scrollTo;
+            const element = document.getElementById(targetId);
+            if (element) {
+                // Use timeout to ensure the DOM is fully rendered before scrolling
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 0);
+            }
+        }
+    }, [location]);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -167,7 +181,7 @@ const Home = () => {
                                     <div className="space-y-4 text-slate-300 leading-relaxed text-justify">
                                         <p>
                                             I'm <strong className="text-white">Farhan Muhib Efty</strong>, an Electrical and Electronic Engineering graduate and
-                                            currently a <strong className="text-white">Assistant Engineer</strong> at <a href="https://www.adnsemicon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 font-bold hover:underline">ADN SEMICONDUCTORS</a>.
+                                            currently an <strong className="text-white">Assistant Engineer</strong> at <a href="https://www.adnsemicon.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 font-bold hover:underline">ADN SEMICONDUCTORS</a>.
                                         </p>
                                         <p>
                                             My journey is defined by a passion for silicon perfection. Working in the RTL Design and
@@ -222,6 +236,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+
+
+
                 </section>
 
                 {/* Experience Section */}
