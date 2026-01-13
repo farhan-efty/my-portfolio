@@ -698,27 +698,55 @@ const Home = () => {
                 </section>
 
                 {/* Achievements Section */}
-                <section id="achievements" className="py-12 bg-slate-50 dark:bg-slate-900">
-                    <div className="container mx-auto px-6">
-                        <div className="flex justify-center mb-12">
+                {/* Achievements Section */}
+                <section id="achievements" className="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+                    {/* Background Decorations */}
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                        <div className="absolute top-[20%] left-[10%] w-72 h-72 bg-amber-400/5 rounded-full blur-[80px]"></div>
+                        <div className="absolute bottom-[20%] right-[10%] w-72 h-72 bg-yellow-400/5 rounded-full blur-[80px]"></div>
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex justify-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
-                                <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
+                                <span className="bg-amber-100 dark:bg-amber-900/30 p-3 rounded-full text-amber-600 dark:text-amber-500 shadow-lg shadow-amber-500/20">
                                     <i className="fas fa-trophy"></i>
                                 </span>
                                 Achievements
                             </h2>
                         </div>
-                        <div className="max-w-5xl mx-auto flex flex-col items-center space-y-6 animate-fadeInUp">
-                            <div className="relative group w-full max-w-4xl">
-                                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                <div className="relative card bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 flex items-center gap-6 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-bl-full"></div>
-                                    <span className="relative z-10 flex items-center justify-center h-14 w-14 rounded-full bg-yellow-100 dark:bg-yellow-900/20">
-                                        <i className="fa-solid fa-trophy text-yellow-500 text-3xl"></i>
-                                    </span>
-                                    <div className="relative z-10">
-                                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Outstanding Contribution Award (2022)</h3>
-                                        <p className="text-slate-600 dark:text-slate-300 text-justify">Recognized for outstanding contributions and leadership in the IEEE AUST Student Branch.</p>
+
+                        <div className="max-w-4xl mx-auto space-y-8 animate-fadeInUp">
+                            <div className="group relative">
+                                {/* Glow BG */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-yellow-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+                                <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-1 overflow-hidden shadow-sm hover:shadow-xl border border-slate-100 dark:border-slate-700 hover:border-amber-500/40 transition-all duration-500">
+                                    <div className="bg-slate-50/50 dark:bg-slate-900/50 rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 backdrop-blur-sm">
+
+                                        {/* Icon Box */}
+                                        <div className="shrink-0 relative">
+                                            <div className="absolute inset-0 bg-amber-400 blur-lg opacity-20"></div>
+                                            <div className="relative w-24 h-24 bg-gradient-to-br from-amber-100 to-yellow-50 dark:from-slate-800 dark:to-slate-700 rounded-full flex items-center justify-center border border-amber-200 dark:border-amber-900/50 shadow-inner group-hover:scale-105 transition-transform duration-500">
+                                                <i className="fa-solid fa-trophy text-4xl text-amber-500 drop-shadow-sm"></i>
+                                            </div>
+                                            {/* Badge */}
+                                            <div className="absolute -bottom-2 -right-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold py-1 px-3 rounded-full shadow-lg border-2 border-white dark:border-slate-900">
+                                                2022
+                                            </div>
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="flex-grow text-center md:text-left">
+                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Outstanding Contribution Award</h3>
+                                            <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-4 text-justify">
+                                                Recognized for outstanding contributions and leadership in the IEEE AUST Student Branch.
+                                            </p>
+                                            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                                                <span className="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-sm font-medium rounded-lg border border-amber-200 dark:border-amber-800/50">Leadership</span>
+                                                <span className="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-sm font-medium rounded-lg border border-amber-200 dark:border-amber-800/50">IASB</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -726,21 +754,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                {/* CTA / Let's Work Together */}
-                <section className="py-16 bg-blue-600 text-white">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Work Together</h2>
-                            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-                                Have a project in mind or want to discuss VLSI design? I'm always open to new opportunities and collaborations.
-                            </p>
-                            <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-50 transition-all transform hover:-translate-y-1 shadow-lg">
-                                <i className="fas fa-paper-plane"></i>
-                                Get in Touch
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+
 
             </main>
 
