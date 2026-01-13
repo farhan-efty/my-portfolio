@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { Link, useLocation } from 'react-router-dom';
@@ -111,6 +112,25 @@ const Home = () => {
 
     return (
         <div className="bg-slate-50 dark:bg-slate-900 min-h-screen font-sans transition-colors duration-300">
+            <Helmet>
+                <title>Farhan Muhib Efty | RTL Design Engineer</title>
+                <meta name="description" content="Portfolio of Farhan Muhib Efty, an Electrical Engineer specializing in RTL Design, Verification (SystemVerilog/UVM), and Embedded Systems." />
+                <meta name="keywords" content="Farhan Muhib Efty, RTL Design, Verification Engineer, SystemVerilog, UVM, FPGA, ASIC, Portfolio" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://farhan-efty.netlify.app/" />
+                <meta property="og:title" content="Farhan Muhib Efty | RTL Design Engineer" />
+                <meta property="og:description" content="Explore the portfolio of an aspiring VLSI engineer specializing in RTL Design and Verification." />
+                <meta property="og:image" content="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1200" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://farhan-efty.netlify.app/" />
+                <meta property="twitter:title" content="Farhan Muhib Efty | RTL Design Engineer" />
+                <meta property="twitter:description" content="Explore the portfolio of an aspiring VLSI engineer specializing in RTL Design and Verification." />
+                <meta property="twitter:image" content="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1200" />
+            </Helmet>
             <Navbar />
 
             <main>
