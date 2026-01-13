@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Experience from './Experience';
@@ -11,7 +11,7 @@ import Contact from './Contact';
 
 function App() {
     return (
-        <Router basename={import.meta.env.BASE_URL}>
+        <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/index.html" element={<Home />} />
