@@ -613,13 +613,13 @@ const Home = () => {
                                 <div className="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
-                                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                                            <i className="fa-solid fa-graduation-cap text-2xl"></i>
+                                        <div className="flex items-center gap-4 mb-3">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                                <i className="fa-solid fa-graduation-cap text-2xl"></i>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">B.Sc. in Electrical and Electronic Engineering</h3>
                                         </div>
-                                        <div className="mb-6">
-                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">B.Sc. in Electrical and Electronic Engineering</h3>
-                                            <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1">Ahsanullah University of Science and Technology</p>
-                                        </div>
+                                        <p className="text-blue-600 dark:text-blue-400 font-bold text-sm mb-6">Ahsanullah University of Science and Technology</p>
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
                                                 <i className="fa-solid fa-calendar-days text-blue-500"></i>
@@ -640,13 +640,13 @@ const Home = () => {
                                 <div className="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
-                                        <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                                            <i className="fa-solid fa-school text-2xl"></i>
+                                        <div className="flex items-center gap-4 mb-3">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                                <i className="fa-solid fa-school text-2xl"></i>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">Higher Secondary Certificate (HSC)</h3>
                                         </div>
-                                        <div className="mb-6">
-                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Higher Secondary Certificate (HSC)</h3>
-                                            <p className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm mb-1">Dhaka City College</p>
-                                        </div>
+                                        <p className="text-indigo-600 dark:text-indigo-400 font-bold text-sm mb-6">Dhaka City College</p>
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
                                                 <i className="fa-solid fa-calendar-days text-indigo-500"></i>
@@ -667,13 +667,13 @@ const Home = () => {
                                 <div className="relative card bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200 dark:border-slate-700 transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
-                                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
-                                            <i className="fa-solid fa-book-open text-2xl"></i>
+                                        <div className="flex items-center gap-4 mb-3">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shrink-0 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                                                <i className="fa-solid fa-book-open text-2xl"></i>
+                                            </div>
+                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">Secondary School Certificate (SSC)</h3>
                                         </div>
-                                        <div className="mb-6">
-                                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">Secondary School Certificate (SSC)</h3>
-                                            <p className="text-purple-600 dark:text-purple-400 font-semibold text-sm mb-1">Gobindaganj Govt. High School</p>
-                                        </div>
+                                        <p className="text-purple-600 dark:text-purple-400 font-bold text-sm mb-6">Gobindaganj Govt. High School</p>
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
                                                 <i className="fa-solid fa-calendar-days text-purple-500"></i>

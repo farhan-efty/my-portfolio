@@ -164,49 +164,49 @@ const Leadership = () => {
             {/* Timeline Section */}
             <section className="py-20 bg-slate-50 dark:bg-slate-950 flex-grow">
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="space-y-12">
+                    <div className="relative space-y-12">
+
+                        {/* Timeline Line */}
+                        <div className="absolute left-12 top-0 bottom-0 w-1 bg-blue-600 rounded-full"></div>
+
                         {leadershipRoles.map((role, index) => (
                             <div
                                 key={index}
-                                className="timeline-card group animate-fadeInUp"
+                                className="relative pl-32 md:pl-36 group animate-fadeInUp"
                                 style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                             >
-                                <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-                                    {/* Timeline Dot and Icon */}
-                                    <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:w-32 shrink-0">
-                                        <div
-                                            className="timeline-icon w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 shadow-md group-hover:scale-110 transition-transform duration-300"
-                                            style={{ animationDelay: `${(index + 2) * 0.1}s` }}
-                                        >
-                                            <i className="fas fa-user-tie text-2xl"></i>
+                                {/* Timeline Icon - center aligned with line */}
+                                <div className="absolute left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10">
+                                    {/* Gap Mask */}
+                                    <div className="h-16 w-16 bg-slate-50 dark:bg-slate-950 rounded-full flex items-center justify-center">
+                                        {/* Outer Ring & Icon */}
+                                        <div className="h-12 w-12 rounded-full border-[3px] border-blue-600 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110">
+                                            <i className="fas fa-user-tie text-white text-xl"></i>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {/* Card Content */}
-                                    <div className="flex-1 relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                        <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-primary-400 dark:group-hover:border-primary-600 overflow-hidden hover:-translate-y-1">
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full"></div>
-                                            <div className="relative z-10">
-                                                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                                                    <div>
-                                                        <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">{role.title}</h3>
-                                                        <p className="text-lg text-slate-700 dark:text-slate-300 font-semibold">{role.organization}</p>
-                                                    </div>
-                                                    <span className="text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap">
-                                                        {role.period}
-                                                    </span>
-                                                </div>
-                                                <ul className="space-y-3 text-slate-600 dark:text-slate-400">
-                                                    {role.achievements.map((item, i) => (
-                                                        <li key={i} className="flex items-start gap-3">
-                                                            <i className="fa-solid fa-circle-check text-primary-500 mt-1 shrink-0"></i>
-                                                            <span>{item}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                {/* Card Content */}
+                                <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-primary-400 dark:group-hover:border-primary-600 overflow-hidden hover:-translate-y-1">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full"></div>
+                                    <div className="relative z-10">
+                                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">{role.title}</h3>
+                                                <p className="text-lg text-slate-700 dark:text-slate-300 font-semibold">{role.organization}</p>
                                             </div>
+                                            <span className="text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap self-start">
+                                                {role.period}
+                                            </span>
                                         </div>
+                                        <ul className="space-y-3 text-slate-600 dark:text-slate-400 text-justify">
+                                            {role.achievements.map((item, i) => (
+                                                <li key={i} className="flex items-start gap-3">
+                                                    <i className="fa-solid fa-circle-check text-primary-500 mt-1 shrink-0"></i>
+                                                    <span>{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -229,6 +229,6 @@ const Leadership = () => {
             )}
         </div>
     );
-};
+}
 
 export default Leadership;
