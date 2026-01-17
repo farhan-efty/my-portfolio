@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
+import SEO from './SEO';
 
 import Home from './Home';
 import Experience from './Experience';
@@ -14,6 +15,7 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
+            <SEO />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/index.html" element={<Home />} />
