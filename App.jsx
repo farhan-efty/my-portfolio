@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import SEO from './SEO';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Home from './Home';
 import Experience from './Experience';
@@ -12,6 +14,18 @@ import Education from './Education';
 import Contact from './Contact';
 
 function App() {
+    useEffect(() => {
+        // Force dark mode globally to match original theme
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+    }, []);
+
     return (
         <Router>
             <ScrollToTop />

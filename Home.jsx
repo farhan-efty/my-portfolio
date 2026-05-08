@@ -5,20 +5,9 @@ import Footer from './Footer';
 import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
-    const [theme, setTheme] = useState('light');
     const location = useLocation();
 
     useEffect(() => {
-        // Theme initialization
-        const savedTheme = localStorage.getItem('theme');
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const initialTheme = savedTheme || systemTheme;
-        setTheme(initialTheme);
-        if (initialTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
 
         // Typing effect
         const textElement = document.getElementById('typing-text');
@@ -62,19 +51,7 @@ const Home = () => {
             type();
         }
 
-        // Animation Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.animate-fadeInUp').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
+        // Old Animation Observer code removed; using AOS now.
 
         // Scroll to top visibility
         const handleScroll = () => {
@@ -87,7 +64,6 @@ const Home = () => {
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            observer.disconnect();
             if (typingTimeout) clearTimeout(typingTimeout);
         };
 
@@ -143,7 +119,7 @@ const Home = () => {
                     }}></div>
 
                     {/* Content */}
-                    <div className="container mx-auto px-6 z-10 flex flex-col items-center justify-center text-center space-y-8 animate-fadeInUp">
+                    <div className="container mx-auto px-6 z-10 flex flex-col items-center justify-center text-center space-y-8" data-aos="fade-up">
 
                         {/* Profile Image */}
                         <div className="relative group">
@@ -178,7 +154,7 @@ const Home = () => {
                 <section id="about" className="py-12 bg-[#0b163b]">
                     <div className="container mx-auto px-6">
                         {/* Section Header */}
-                        <div className="flex justify-center mb-12 animate-fadeInUp">
+                        <div className="flex justify-center mb-12" data-aos="fade-down">
                             <h2 className="text-4xl font-bold text-white flex items-center gap-3">
                                 <span className="bg-blue-600/20 p-3 rounded-full text-blue-500">
                                     <i className="fas fa-user"></i>
@@ -191,7 +167,7 @@ const Home = () => {
                             {/* Left Column - Info Cards */}
                             <div className="lg:col-span-2 space-y-8">
                                 {/* Professional Background Card */}
-                                <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all shadow-xl animate-fadeInUp">
+                                <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-blue-500/30 transition-all shadow-xl" data-aos="fade-right">
                                     <div className="flex items-center gap-4 mb-6">
                                         <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-600/20">
                                             <i className="fas fa-user-tie"></i>
@@ -212,9 +188,9 @@ const Home = () => {
                                 </div>
 
                                 {/* Bottom Grid */}
-                                <div className="grid md:grid-cols-2 gap-8 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+                                <div className="grid md:grid-cols-2 gap-8">
                                     {/* Technical Focus */}
-                                    <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-indigo-500/30 transition-all shadow-xl flex flex-col items-start gap-4 h-full">
+                                    <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-indigo-500/30 transition-all shadow-xl flex flex-col items-start gap-4 h-full" data-aos="fade-up" data-aos-delay="100">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xl shadow-lg shadow-indigo-600/20">
                                                 <i className="fas fa-microchip"></i>
@@ -228,7 +204,7 @@ const Home = () => {
                                     </div>
 
                                     {/* Vision */}
-                                    <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-purple-500/30 transition-all shadow-xl flex flex-col items-start gap-4 h-full">
+                                    <div className="bg-[#15224a] rounded-3xl p-8 border border-slate-700/50 hover:border-purple-500/30 transition-all shadow-xl flex flex-col items-start gap-4 h-full" data-aos="fade-up" data-aos-delay="200">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-600/20">
                                                 <i className="fas fa-rocket"></i>
@@ -244,7 +220,7 @@ const Home = () => {
                             </div>
 
                             {/* Right Column - Image */}
-                            <div className="lg:col-span-1 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+                            <div className="lg:col-span-1" data-aos="fade-left" data-aos-delay="300">
                                 <div className="h-full bg-gradient-to-b from-teal-800/20 to-teal-900/10 rounded-[3rem] p-2 border border-slate-700/30 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-teal-500/10 mix-blend-overlay"></div>
                                     <img src="https://drive.google.com/thumbnail?id=1PEbPfvPBWrJUMMM-XpUcxc_jycTA0uik&sz=w1200"
@@ -264,7 +240,7 @@ const Home = () => {
                 {/* Experience Section */}
                 <section id="experience" className="py-12 bg-white dark:bg-slate-950">
                     <div className="container mx-auto px-6">
-                        <div className="flex justify-center mb-12">
+                        <div className="flex justify-center mb-12" data-aos="fade-down">
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                 <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
                                     <i className="fas fa-briefcase"></i>
@@ -279,7 +255,7 @@ const Home = () => {
                                 </div>
                                 <div className="relative group">
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                    <div className="relative card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 overflow-hidden" tabIndex="0">
+                                    <div className="relative card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 overflow-hidden" tabIndex="0" data-aos="fade-up">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                                         <div className="relative z-10">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
@@ -323,14 +299,14 @@ const Home = () => {
                                 Technical Expertise
                             </h2>
                         </div>
-                        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto animate-fadeInUp">
+                        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                             {/* Technical Skills */}
-                            <div>
+                            <div data-aos="fade-right">
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
                                     <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 p-2 rounded-lg"><i className="fas fa-code"></i></span>
                                     Technical Skills
                                 </h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
                                     {[
                                         { icon: 'fab fa-cuttlefish', name: 'C/C++' },
                                         { icon: 'fab fa-python', name: 'Python' },
@@ -344,24 +320,24 @@ const Home = () => {
                                         { icon: 'fas fa-chart-line', name: 'Power BI' },
                                         { icon: 'fas fa-chart-bar', name: 'Tableau' },
                                     ].map((skill, index) => (
-                                        <div key={index} className="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                                            <i className={`${skill.icon} fa-2x text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110`}></i>
-                                            <span className="font-medium text-sm">{skill.name}</span>
+                                        <div key={index} className="card bg-white dark:bg-slate-800 p-3 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-blue-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+                                            <i className={`${skill.icon} text-2xl text-slate-400 group-hover:text-blue-600 transition-all duration-300 group-hover:scale-110`}></i>
+                                            <span className="font-medium text-xs text-center">{skill.name}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
                             {/* Soft Skills */}
-                            <div>
+                            <div data-aos="fade-left">
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
                                     <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 p-2 rounded-lg"><i className="fas fa-users"></i></span>
                                     Soft Skills & Tools
                                 </h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                    <Link to="/leadership" className="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all hover:-translate-y-1">
-                                        <i className="fas fa-users fa-2x text-slate-400 group-hover:text-purple-600 transition-colors"></i>
-                                        <span className="font-medium text-sm">Leadership</span>
+                                <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                                    <Link to="/leadership" className="card bg-white dark:bg-slate-800 p-3 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-purple-500/30 group transition-all hover:-translate-y-1 hover:shadow-sm">
+                                        <i className="fas fa-users text-2xl text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
+                                        <span className="font-medium text-xs text-center">Leadership</span>
                                     </Link>
                                     {[
                                         { icon: 'fas fa-clock', name: 'Time Management' },
@@ -371,9 +347,9 @@ const Home = () => {
                                         { icon: 'fa-solid fa-file-word', name: 'Office Suite' },
                                         { icon: 'fas fa-chart-pie', name: 'Analytical Ability' },
                                     ].map((skill, index) => (
-                                        <div key={index} className="card bg-white dark:bg-slate-800 p-4 rounded-xl flex flex-col items-center justify-center gap-3 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                                            <i className={`${skill.icon} fa-2x text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110`}></i>
-                                            <span className="font-medium text-sm">{skill.name}</span>
+                                        <div key={index} className="card bg-white dark:bg-slate-800 p-3 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-purple-500/30 group transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+                                            <i className={`${skill.icon} text-2xl text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110`}></i>
+                                            <span className="font-medium text-xs text-center">{skill.name}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -385,7 +361,7 @@ const Home = () => {
                 {/* Projects Section */}
                 <section id="projects" className="py-12 bg-white dark:bg-slate-950">
                     <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-16" data-aos="fade-up">
                             <div className="flex justify-center mb-4">
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                     <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
@@ -420,7 +396,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </article>
-                            <article className="relative group">
+                            <article className="relative group" data-aos="fade-up" data-aos-delay="100">
                                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
                                 <div className="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-bl-full"></div>
@@ -439,7 +415,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </article>
-                            <article className="relative group">
+                            <article className="relative group" data-aos="fade-up" data-aos-delay="200">
                                 <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
                                 <div className="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-500/10 to-transparent rounded-bl-full"></div>
@@ -458,7 +434,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </article>
-                            <article className="relative group">
+                            <article className="relative group" data-aos="fade-up" data-aos-delay="300">
                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
                                 <div className="relative bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full"></div>
@@ -478,8 +454,8 @@ const Home = () => {
                                 </div>
                             </article>
                         </div>
-                        <div className="flex justify-center mt-8">
-                            <Link to="/projects" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-lg transition-all animate-fadeInUp">
+                        <div className="flex justify-center mt-8" data-aos="zoom-in">
+                            <Link to="/projects" className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-lg transition-all">
                                 View All Projects
                                 <i className="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
                             </Link>
@@ -502,16 +478,14 @@ const Home = () => {
                         <div className="relative border-l-4 border-blue-600 ml-3 md:ml-6 space-y-8">
                             {[
                                 {
-                                    title: "Membership Development Coordinator",
+                                    title: "Event Management Coordinator",
                                     organization: "IEEE Young Professionals Bangladesh",
                                     icon: "fa-solid fa-user-tie",
-                                    period: "May 2025 – Present",
+                                    period: "April 2026 – Present",
                                     achievements: [
-                                        "Collaborated with multiple IEEE Student Branches nationwide to co-host YP-focused programs and outreach activities.",
-                                        "Worked on flagship initiatives including YPCon 2025, IEEE YP Talk Series, and IEEE Region 10 YP UpSkill – Bangladesh 2025.",
-                                        "Moderated the UpSkill 2025 Networking Session at AUST alongside Md Abu Saleh, fostering meaningful professional connections.",
-                                        "Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic learning with industry-ready skills.",
-                                        "Drove engagement campaigns and post-event follow-ups to successfully convert attendees into active YP members."
+                                        "Spearheading the planning and execution of impactful events for IEEE YP Bangladesh 2026.",
+                                        "Transforming innovative ideas into world-class experiences that inspire, connect, and empower young professionals.",
+                                        "Managing end-to-end event logistics to ensure seamless execution and maximize participant engagement."
                                     ]
                                 },
                                 {
@@ -569,7 +543,7 @@ const Home = () => {
                                     ]
                                 }
                             ].map((role, index) => (
-                                <div key={index} className="relative pl-8 md:pl-12 group">
+                                <div key={index} className="relative pl-8 md:pl-12 group" data-aos="fade-up" data-aos-delay={index * 100}>
                                     <div className="absolute -left-[22px] top-6 h-10 w-10 rounded-full border-[6px] border-white dark:border-slate-900 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10">
                                         <i className={`${role.icon} text-white text-[10px]`}></i>
                                     </div>
@@ -607,7 +581,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex justify-center mt-12">
+                        <div className="flex justify-center mt-12" data-aos="zoom-in">
                             <Link to="/leadership" className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                 View Full Timeline <i className="fas fa-arrow-right ml-2"></i>
                             </Link>
@@ -708,7 +682,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-center mt-16">
+                        <div className="flex justify-center mt-16" data-aos="zoom-in">
                             <Link to="/education" className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                 <span>View Detailed Timeline</span>
                                 <i className="fas fa-arrow-right transition-transform group-hover:translate-x-2 duration-300"></i>
@@ -736,8 +710,8 @@ const Home = () => {
                             </h2>
                         </div>
 
-                        <div className="max-w-4xl mx-auto space-y-8 animate-fadeInUp">
-                            <div className="group relative">
+                        <div className="max-w-4xl mx-auto space-y-8">
+                            <div className="group relative" data-aos="fade-up">
                                 {/* Glow BG */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 via-yellow-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 

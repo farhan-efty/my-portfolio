@@ -85,7 +85,7 @@ const Experience = () => {
                         <div className="absolute left-8 md:left-16 top-0 h-full w-1 bg-blue-600 -translate-x-1/2"></div>
 
                         {/* Role 1 */}
-                        <div className="timeline-card group animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+                        <div className="timeline-card group" data-aos="fade-up" data-aos-delay="100">
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Timeline Dot and Icon */}
                                 <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:w-32 shrink-0">
@@ -143,7 +143,7 @@ const Experience = () => {
                         </div>
 
                         {/* Role 2 */}
-                        <div className="timeline-card group animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+                        <div className="timeline-card group" data-aos="fade-up" data-aos-delay="200">
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Timeline Dot and Icon */}
                                 <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:w-32 shrink-0">

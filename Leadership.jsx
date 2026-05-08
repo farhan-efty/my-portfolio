@@ -69,65 +69,94 @@ const Leadership = () => {
 
     const leadershipRoles = [
         {
-            title: "Membership Development Coordinator",
             organization: "IEEE Young Professionals Bangladesh",
-            period: "May 2025 – Present",
-            achievements: [
-                "Collaborated with multiple IEEE Student Branches nationwide to co-host YP-focused programs and outreach activities.",
-                "Worked on flagship initiatives including YPCon 2025, IEEE YP Talk Series, and IEEE Region 10 YP UpSkill – Bangladesh 2025.",
-                "Moderated the UpSkill 2025 Networking Session at AUST alongside Md Abu Saleh, fostering meaningful professional connections.",
-                "Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic learning with industry-ready skills.",
-                "Drove engagement campaigns and post-event follow-ups to successfully convert attendees into active YP members."
+            roles: [
+                {
+                    title: "Event Management Coordinator",
+                    period: "Apr 2026 – Present",
+                    achievements: [
+                        "Spearheading the planning and execution of impactful events for IEEE YP Bangladesh 2026.",
+                        "Transforming innovative ideas into world-class experiences that inspire, connect, and empower young professionals.",
+                        "Managing end-to-end event logistics to ensure seamless execution and maximize participant engagement."
+                    ]
+                },
+                {
+                    title: "Membership Development Coordinator",
+                    period: "Apr 2025 – Mar 2026",
+                    achievements: [
+                        "Collaborated with multiple IEEE Student Branches nationwide to co-host YP-focused programs and outreach activities.",
+                        "Worked on flagship initiatives including YPCon 2025, IEEE YP Talk Series, and IEEE Region 10 YP UpSkill – Bangladesh 2025.",
+                        "Moderated the UpSkill 2025 Networking Session at AUST alongside Md Abu Saleh, fostering meaningful professional connections.",
+                        "Coordinated with IEEE Bangladesh Section and IEEE AUST SB to bridge academic learning with industry-ready skills.",
+                        "Drove engagement campaigns and post-event follow-ups to successfully convert attendees into active YP members."
+                    ]
+                }
             ]
         },
         {
-            title: "Chairperson",
             organization: "IEEE AUST Student Branch",
-            period: "Feb 2023 – Feb 2024",
-            achievements: [
-                "Organized diverse events, meetings, seminars, workshops, webinars, and competitions, achieving the highest number of events and student members since 2004.",
-                "Hosted two national competitions and one intra-university competition.",
-                "Co-hosted a conference with IEEE Bangladesh Section and IEEE Young Professionals.",
-                "Served as a Core Volunteer at 26th ICCIT 2023, 10th ICPS 2023, and 9th IEEE WIECON ECE 2023.",
-                "Planned and controlled all chapter activities, ensuring smooth execution.",
-                "Developed a new website and opened a new chapter during the tenure.",
-                "Led a team of 57 student officers and managed social media accounts and the website."
+            roles: [
+                {
+                    title: "Chairperson",
+                    period: "Feb 2023 – Feb 2024",
+                    achievements: [
+                        "Organized diverse events, meetings, seminars, workshops, webinars, and competitions, achieving the highest number of events and student members since 2004.",
+                        "Hosted two national competitions and one intra-university competition.",
+                        "Co-hosted a conference with IEEE Bangladesh Section and IEEE Young Professionals.",
+                        "Served as a Core Volunteer at 26th ICCIT 2023, 10th ICPS 2023, and 9th IEEE WIECON ECE 2023.",
+                        "Planned and controlled all chapter activities, ensuring smooth execution.",
+                        "Developed a new website and opened a new chapter during the tenure.",
+                        "Led a team of 57 student officers and managed social media accounts and the website."
+                    ]
+                }
             ]
         },
         {
-            title: "Joint Secretary",
             organization: "AUST Innovation and Design Club",
-            period: "Dec 2022 – May 2023",
-            achievements: [
-                "Led the national tech-biz competition \"Mindsparks'22\" as Operations Lead, engaging 30+ institutions and 1200+ participants.",
-                "Managed a junior team of 63 members, achieving the highest revenue and member recruitment at the Club Fair.",
-                "Served as an Event Coordinator for \"Mindsparks '23\".",
-                "Organized \"Innoventure 21\" and \"Cognibat 21\" as an Executive Member.",
-                "Designed visuals for events and social media promotions.",
-                "Led the Event Management and Logistics team."
+            roles: [
+                {
+                    title: "Joint Secretary",
+                    period: "Dec 2022 – May 2023",
+                    achievements: [
+                        "Led the national tech-biz competition \"Mindsparks'22\" as Operations Lead, engaging 30+ institutions and 1200+ participants.",
+                        "Managed a junior team of 63 members, achieving the highest revenue and member recruitment at the Club Fair.",
+                        "Served as an Event Coordinator for \"Mindsparks '23\".",
+                        "Organized \"Innoventure 21\" and \"Cognibat 21\" as an Executive Member.",
+                        "Designed visuals for events and social media promotions.",
+                        "Led the Event Management and Logistics team."
+                    ]
+                }
             ]
         },
         {
-            title: "Vice Chair",
             organization: "IEEE Power & Energy Society, AUST Student Branch Chapter",
-            period: "Mar 2022 – Feb 2023",
-            achievements: [
-                "Organized events, seminars, webinars, and meetings.",
-                "Created visuals for events and social media promotions.",
-                "Achieved the prestigious High-Performance Student Branch Chapter Award.",
-                "Served as IEEE PES DAY ambassador.",
-                "Effectively managed the social media accounts of IEEE PES AUST Student Branch Chapter."
+            roles: [
+                {
+                    title: "Vice Chair",
+                    period: "Mar 2022 – Feb 2023",
+                    achievements: [
+                        "Organized events, seminars, webinars, and meetings.",
+                        "Created visuals for events and social media promotions.",
+                        "Achieved the prestigious High-Performance Student Branch Chapter Award.",
+                        "Served as IEEE PES DAY ambassador.",
+                        "Effectively managed the social media accounts of IEEE PES AUST Student Branch Chapter."
+                    ]
+                }
             ]
         },
         {
-            title: "Assistant Organizing Secretary",
             organization: "AUST EEE Society",
-            period: "Nov 2021 – May 2022",
-            achievements: [
-                "Responsible for coordinating events, seminars, and workshops.",
-                "Successfully managed the planning and execution of departmental activities including the picnic \"Tridib Ucchash,\" sports events, and AUST EEE DAY.",
-                "Organized the Three Minutes Thesis presentation program within the department.",
-                "Contributed as a volunteer at Tech Fiesta."
+            roles: [
+                {
+                    title: "Assistant Organizing Secretary",
+                    period: "Nov 2021 – May 2022",
+                    achievements: [
+                        "Responsible for coordinating events, seminars, and workshops.",
+                        "Successfully managed the planning and execution of departmental activities including the picnic \"Tridib Ucchash,\" sports events, and AUST EEE DAY.",
+                        "Organized the Three Minutes Thesis presentation program within the department.",
+                        "Contributed as a volunteer at Tech Fiesta."
+                    ]
+                }
             ]
         }
     ];
@@ -169,11 +198,12 @@ const Leadership = () => {
                         {/* Timeline Line */}
                         <div className="absolute left-12 top-0 bottom-0 w-1 bg-blue-600 rounded-full"></div>
 
-                        {leadershipRoles.map((role, index) => (
+                        {leadershipRoles.map((orgData, index) => (
                             <div
                                 key={index}
-                                className="relative pl-32 md:pl-36 group animate-fadeInUp"
-                                style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+                                className="relative pl-32 md:pl-36 group"
+                                data-aos="fade-up"
+                                data-aos-delay={(index + 1) * 100}
                             >
                                 {/* Timeline Icon - center aligned with line */}
                                 <div className="absolute left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10">
@@ -190,23 +220,29 @@ const Leadership = () => {
                                 <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-primary-400 dark:group-hover:border-primary-600 overflow-hidden hover:-translate-y-1">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
-                                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                                            <div>
-                                                <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">{role.title}</h3>
-                                                <p className="text-lg text-slate-700 dark:text-slate-300 font-semibold">{role.organization}</p>
-                                            </div>
-                                            <span className="text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap self-start">
-                                                {role.period}
-                                            </span>
+                                        <div className="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
+                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{orgData.organization}</h3>
                                         </div>
-                                        <ul className="space-y-3 text-slate-600 dark:text-slate-400 text-justify">
-                                            {role.achievements.map((item, i) => (
-                                                <li key={i} className="flex items-start gap-3">
-                                                    <i className="fa-solid fa-circle-check text-primary-500 mt-1 shrink-0"></i>
-                                                    <span>{item}</span>
-                                                </li>
+                                        <div className="space-y-8">
+                                            {orgData.roles.map((roleItem, roleIndex) => (
+                                                <div key={roleIndex} className="relative">
+                                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                                                        <h4 className="text-xl font-bold text-primary-600 dark:text-primary-400">{roleItem.title}</h4>
+                                                        <span className="text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap self-start">
+                                                            {roleItem.period}
+                                                        </span>
+                                                    </div>
+                                                    <ul className="space-y-3 text-slate-600 dark:text-slate-400 text-justify">
+                                                        {roleItem.achievements.map((item, i) => (
+                                                            <li key={i} className="flex items-start gap-3">
+                                                                <i className="fa-solid fa-circle-check text-primary-500 mt-1 shrink-0"></i>
+                                                                <span>{item}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             ))}
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

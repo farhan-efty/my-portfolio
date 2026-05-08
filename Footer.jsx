@@ -52,43 +52,36 @@ const Footer = () => {
                     </div>
 
                     {/* Social & Resources Column */}
-                    <div className="text-center md:text-left">
+                    <div className="text-center md:text-right flex flex-col md:items-end">
                         <h4 className="text-2xl font-bold text-white mb-6">Connect</h4>
-                        <p className="text-slate-400 mb-8 max-w-md mx-auto md:mx-0">
+                        <p className="text-slate-400 mb-8 max-w-sm mx-auto md:mx-0">
                             Open for collaborations and interesting conversations about Technology and Business.
                         </p>
 
-                        <div className="flex flex-col items-center md:items-start gap-6">
+                        <div className="flex flex-col items-center md:items-end gap-6 w-full">
                             {/* Social Icons */}
-                            <div className="flex gap-3">
+                            <div className="flex gap-5 flex-wrap justify-center md:justify-end text-3xl">
                                 <a href="https://github.com/farhan-efty" target="_blank" aria-label="Github"
-                                    className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all">
+                                    className="text-white hover:text-slate-300 transition-transform hover:scale-110">
                                     <i className="fab fa-github"></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/farhanmuhibefty/" target="_blank" aria-label="LinkedIn"
-                                    className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                                    <i className="fab fa-linkedin-in"></i>
+                                    className="text-[#0a66c2] hover:opacity-80 transition-transform hover:scale-110">
+                                    <i className="fab fa-linkedin"></i>
                                 </a>
                                 <a href="https://www.facebook.com/fmefty/" target="_blank" aria-label="Facebook"
-                                    className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
-                                    <i className="fab fa-facebook-f"></i>
+                                    className="text-[#1877f2] hover:opacity-80 transition-transform hover:scale-110">
+                                    <i className="fab fa-facebook"></i>
                                 </a>
                                 <a href="https://www.instagram.com/farhan__muhib/" target="_blank" aria-label="Instagram"
-                                    className="w-10 h-10 rounded-lg bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-400 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all">
-                                    <i className="fab fa-instagram"></i>
+                                    className="transition-transform hover:scale-110 hover:opacity-80">
+                                    <i className="fab fa-instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}></i>
                                 </a>
-                                <a href="https://farhan-efty.github.io/my-portfolio/" target="_blank" aria-label="Website"
-                                    className="w-10 h-10 rounded-lg bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all">
+                                <a href="https://farhan-efty.netlify.app/" target="_blank" aria-label="Website"
+                                    className="text-teal-400 hover:text-teal-300 transition-transform hover:scale-110">
                                     <i className="fas fa-globe"></i>
                                 </a>
                             </div>
-
-                            {/* Resume Button */}
-                            <a href="https://drive.google.com/file/d/1nde19rHgUe3i7HwDqjJ26hG0JiTNcpS2/view?usp=sharing"
-                                target="_blank" rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-1">
-                                <i className="fas fa-file-alt"></i> Download Resume
-                            </a>
                         </div>
                     </div>
                 </div>

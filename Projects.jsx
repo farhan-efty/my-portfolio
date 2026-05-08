@@ -168,7 +168,7 @@ const Projects = () => {
                 <div className="container mx-auto px-6">
 
                     {/* Filters */}
-                    <div className="flex flex-wrap justify-center gap-3 mb-16 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+                    <div className="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up" data-aos-delay="100">
                         {[
                             { id: 'all', label: 'All Work', color: 'border-blue-500 text-blue-500' },
                             { id: 'vlsi', label: 'VLSI', color: 'hover:border-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-400' },
@@ -195,8 +195,9 @@ const Projects = () => {
                         {filteredProjects.map((project, index) => (
                             <article
                                 key={project.id}
-                                className="project-card group relative flex flex-col h-full bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden animate-fadeInUp"
-                                style={{ animationDelay: `${index * 0.1}s` }}
+                                className="project-card group relative flex flex-col h-full bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
                             >
                                 <div className="relative h-52 overflow-hidden bg-slate-100 dark:bg-slate-800">
                                     <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
