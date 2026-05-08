@@ -81,25 +81,25 @@ const Education = () => {
             <section className="py-16 bg-slate-50 dark:bg-slate-950 flex-grow">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="relative">
-                        <div className="absolute left-[22px] top-0 bottom-0 w-1 bg-emerald-600"></div>
+                        <div className="absolute left-[15px] md:left-[22px] top-0 bottom-0 w-[2px] md:w-1 bg-emerald-600"></div>
 
                         {/* B.Sc. Degree */}
-                        <div className="timeline-item relative mb-12 pl-16 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-                            <div className="absolute left-0 top-0 w-12 h-12 bg-emerald-600 rounded-full border-[6px] border-white dark:border-slate-900 flex items-center justify-center z-20">
-                                <i className="fas fa-graduation-cap text-white text-lg"></i>
+                        <div className="timeline-item relative mb-12 pl-11 md:pl-20 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+                            <div className="absolute left-[-4px] md:left-0 top-0 w-10 h-10 md:w-12 md:h-12 bg-emerald-600 rounded-full border-[4px] md:border-[6px] border-slate-50 dark:border-slate-950 flex items-center justify-center z-20">
+                                <i className="fas fa-graduation-cap text-white text-sm md:text-lg"></i>
                             </div>
 
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                <div className="relative bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0"></div>
+                                <div className="relative bg-white dark:bg-slate-900 p-5 md:p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0 pointer-events-none"></div>
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                             <div>
-                                                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">B.Sc. in Electrical and Electronic Engineering</h3>
-                                                <p className="text-lg text-emerald-600 dark:text-emerald-400 font-semibold">Ahsanullah University of Science and Technology (AUST)</p>
+                                                <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight">B.Sc. in Electrical and Electronic Engineering</h3>
+                                                <p className="text-base md:text-lg text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Ahsanullah University of Science and Technology (AUST)</p>
                                             </div>
-                                            <div className="text-right mt-2 md:mt-0">
+                                            <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2019 – 2023</p>
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="fas fa-star text-yellow-500 mr-1"></i>CGPA: 3.475 / 4.00</p>
                                             </div>
@@ -184,22 +184,22 @@ const Education = () => {
                         </div>
 
                         {/* HSC */}
-                        <div className="timeline-item relative mb-12 pl-16 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-                            <div className="absolute left-0 top-0 w-12 h-12 bg-emerald-600 rounded-full border-[6px] border-white dark:border-slate-900 flex items-center justify-center z-20">
-                                <i className="fas fa-university text-white text-lg"></i>
+                        <div className="timeline-item relative mb-12 pl-11 md:pl-20 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+                            <div className="absolute left-[-4px] md:left-0 top-0 w-10 h-10 md:w-12 md:h-12 bg-emerald-600 rounded-full border-[4px] md:border-[6px] border-slate-50 dark:border-slate-950 flex items-center justify-center z-20">
+                                <i className="fas fa-university text-white text-sm md:text-lg"></i>
                             </div>
 
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                <div className="relative bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0"></div>
+                                <div className="relative bg-white dark:bg-slate-900 p-5 md:p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0 pointer-events-none"></div>
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                             <div>
-                                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Higher Secondary Certificate (HSC)</h3>
-                                                <p className="text-slate-600 dark:text-slate-400">Dhaka City College, Dhaka</p>
+                                                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Higher Secondary Certificate (HSC)</h3>
+                                                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mt-1">Dhaka City College, Dhaka</p>
                                             </div>
-                                            <div className="text-right mt-2 md:mt-0">
+                                            <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2016 – 2018</p>
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="fas fa-star text-yellow-500 mr-1"></i>GPA: 5.00 / 5.00</p>
                                             </div>
@@ -213,22 +213,22 @@ const Education = () => {
                         </div>
 
                         {/* SSC */}
-                        <div className="timeline-item relative pl-16 animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
-                            <div className="absolute left-0 top-0 w-12 h-12 bg-emerald-600 rounded-full border-[6px] border-white dark:border-slate-900 flex items-center justify-center z-20">
-                                <i className="fas fa-school text-white text-lg"></i>
+                        <div className="timeline-item relative pl-11 md:pl-20 animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
+                            <div className="absolute left-[-4px] md:left-0 top-0 w-10 h-10 md:w-12 md:h-12 bg-emerald-600 rounded-full border-[4px] md:border-[6px] border-slate-50 dark:border-slate-950 flex items-center justify-center z-20">
+                                <i className="fas fa-school text-white text-sm md:text-lg"></i>
                             </div>
 
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                <div className="relative bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0"></div>
+                                <div className="relative bg-white dark:bg-slate-900 p-5 md:p-6 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full z-0 pointer-events-none"></div>
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                             <div>
-                                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Secondary School Certificate (SSC)</h3>
-                                                <p className="text-slate-600 dark:text-slate-400">Gobindaganj Govt. High School, Gobindaganj</p>
+                                                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Secondary School Certificate (SSC)</h3>
+                                                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mt-1">Gobindaganj Govt. High School, Gobindaganj</p>
                                             </div>
-                                            <div className="text-right mt-2 md:mt-0">
+                                            <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2016</p>
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="fas fa-star text-yellow-500 mr-1"></i>GPA: 5.00 / 5.00</p>
                                             </div>
