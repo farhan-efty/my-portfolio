@@ -89,15 +89,15 @@ const Experience = () => {
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Timeline Dot and Icon */}
                                 <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:w-32 shrink-0">
-                                    <div className="timeline-icon w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10 border-[6px] border-white dark:border-slate-900">
-                                        <i className="fas fa-briefcase text-2xl"></i>
+                                    <div className="timeline-icon w-12 h-12 md:w-16 md:h-16 ml-2 md:ml-0 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10 border-[4px] md:border-[6px] border-slate-50 dark:border-slate-950">
+                                        <i className="fas fa-briefcase text-lg md:text-2xl"></i>
                                     </div>
                                 </div>
 
                                 {/* Card Content */}
                                 <div className="flex-1 relative">
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                    <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-blue-400 dark:group-hover:border-blue-600 overflow-hidden hover:-translate-y-1">
+                                    <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-5 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-blue-400 dark:group-hover:border-blue-600 overflow-hidden hover:-translate-y-1">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                                         <div className="relative z-10">
                                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
@@ -147,15 +147,15 @@ const Experience = () => {
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                                 {/* Timeline Dot and Icon */}
                                 <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:w-32 shrink-0">
-                                    <div className="timeline-icon w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10 border-[6px] border-white dark:border-slate-900">
-                                        <i className="fas fa-briefcase text-2xl"></i>
+                                    <div className="timeline-icon w-12 h-12 md:w-16 md:h-16 ml-2 md:ml-0 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10 border-[4px] md:border-[6px] border-slate-50 dark:border-slate-950">
+                                        <i className="fas fa-briefcase text-lg md:text-2xl"></i>
                                     </div>
                                 </div>
 
                                 {/* Card Content */}
                                 <div className="flex-1 relative">
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                    <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-blue-400 dark:group-hover:border-blue-600 overflow-hidden hover:-translate-y-1">
+                                    <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-5 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-blue-400 dark:group-hover:border-blue-600 overflow-hidden hover:-translate-y-1">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                                         <div className="relative z-10">
                                             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">

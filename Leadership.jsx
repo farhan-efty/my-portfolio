@@ -196,17 +196,17 @@ const Leadership = () => {
                     <div className="relative space-y-12">
 
                         {/* Timeline Line */}
-                        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-1 bg-blue-600 rounded-full"></div>
+                        <div className="absolute left-[15px] md:left-12 top-0 bottom-0 w-[2px] md:w-1 bg-blue-600 rounded-full"></div>
 
                         {leadershipRoles.map((orgData, index) => (
                             <div
                                 key={index}
-                                className="relative pl-16 md:pl-36 group"
+                                className="relative pl-12 md:pl-36 group"
                                 data-aos="fade-up"
                                 data-aos-delay={(index + 1) * 100}
                             >
                                 {/* Timeline Icon - center aligned with line */}
-                                <div className="absolute left-[-6px] md:left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10 transform scale-75 md:scale-100 origin-center">
+                                <div className="absolute left-[-16px] md:left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10 transform scale-[0.65] md:scale-100 origin-center">
                                     {/* Gap Mask */}
                                     <div className="h-16 w-16 bg-slate-50 dark:bg-slate-950 rounded-full flex items-center justify-center">
                                         {/* Outer Ring & Icon */}
@@ -217,7 +217,7 @@ const Leadership = () => {
                                 </div>
 
                                 {/* Card Content */}
-                                <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-6 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-primary-400 dark:group-hover:border-primary-600 overflow-hidden hover:-translate-y-1">
+                                <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-md hover:shadow-xl p-5 md:p-8 transition-all duration-300 border border-slate-200 dark:border-slate-800 group-hover:border-primary-400 dark:group-hover:border-primary-600 overflow-hidden hover:-translate-y-1">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
                                         <div className="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">

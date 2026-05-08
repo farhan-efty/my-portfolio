@@ -248,14 +248,14 @@ const Home = () => {
                                 Professional Experience
                             </h2>
                         </div>
-                        <div className="relative border-l-4 border-blue-600 ml-3 md:ml-6 space-y-12">
-                            <div className="relative pl-8 md:pl-12">
-                                <div className="absolute -left-[22px] top-0 h-10 w-10 rounded-full border-[6px] border-white dark:border-slate-900 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10">
+                        <div className="relative border-l-[2px] md:border-l-4 border-blue-600 ml-4 md:ml-6 space-y-12">
+                            <div className="relative pl-6 md:pl-12">
+                                <div className="absolute -left-[15px] md:-left-[22px] top-0 h-8 w-8 md:h-10 md:w-10 rounded-full border-[4px] md:border-[6px] border-white dark:border-slate-900 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10">
                                     <i className="fas fa-briefcase text-white text-[10px]"></i>
                                 </div>
                                 <div className="relative group">
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-                                    <div className="relative card collapsible bg-white dark:bg-slate-900 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 overflow-hidden" tabIndex="0" data-aos="fade-up">
+                                    <div className="relative card collapsible bg-white dark:bg-slate-900 p-5 md:p-8 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-800 transition-all duration-500 hover:-translate-y-2 overflow-hidden" tabIndex="0" data-aos="fade-up">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
                                         <div className="relative z-10">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
@@ -475,7 +475,7 @@ const Home = () => {
                                 Leadership & Volunteering
                             </h2>
                         </div>
-                        <div className="relative border-l-4 border-blue-600 ml-3 md:ml-6 space-y-8">
+                        <div className="relative border-l-[2px] md:border-l-4 border-blue-600 ml-4 md:ml-6 space-y-8">
                             {[
                                 {
                                     title: "Event Management Coordinator",
@@ -543,12 +543,12 @@ const Home = () => {
                                     ]
                                 }
                             ].map((role, index) => (
-                                <div key={index} className="relative pl-8 md:pl-12 group" data-aos="fade-up" data-aos-delay={index * 100}>
-                                    <div className="absolute -left-[22px] top-6 h-10 w-10 rounded-full border-[6px] border-white dark:border-slate-900 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10">
-                                        <i className={`${role.icon} text-white text-[10px]`}></i>
+                                <div key={index} className="relative pl-6 md:pl-12 group" data-aos="fade-up" data-aos-delay={index * 100}>
+                                    <div className="absolute -left-[15px] md:-left-[22px] top-6 h-8 w-8 md:h-10 md:w-10 rounded-full border-[4px] md:border-[6px] border-white dark:border-slate-900 bg-blue-600 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-10">
+                                        <i className={`${role.icon} text-white text-[10px] md:text-xs`}></i>
                                     </div>
 
-                                    <div className="relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-lg border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-1">
+                                    <div className="relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-5 md:p-8 shadow-sm hover:shadow-lg border border-slate-100 dark:border-slate-700 transition-all duration-300 hover:-translate-y-1">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full pointer-events-none"></div>
 
                                         <div className="relative z-10">
