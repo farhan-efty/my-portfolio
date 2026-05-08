@@ -306,7 +306,7 @@ const Home = () => {
                                     <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 p-2 rounded-lg"><i className="fas fa-code"></i></span>
                                     Technical Skills
                                 </h3>
-                                <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                                <div className="grid grid-cols-2 min-[480px]:grid-cols-3 md:grid-cols-4 gap-3">
                                     {[
                                         { icon: 'fab fa-cuttlefish', name: 'C/C++' },
                                         { icon: 'fab fa-python', name: 'Python' },
@@ -334,7 +334,7 @@ const Home = () => {
                                     <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 p-2 rounded-lg"><i className="fas fa-users"></i></span>
                                     Soft Skills & Tools
                                 </h3>
-                                <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                                <div className="grid grid-cols-2 min-[480px]:grid-cols-3 md:grid-cols-4 gap-3">
                                     <Link to="/leadership" className="card bg-white dark:bg-slate-800 p-3 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-purple-500/30 group transition-all hover:-translate-y-1 hover:shadow-sm">
                                         <i className="fas fa-users text-2xl text-slate-400 group-hover:text-purple-600 transition-all duration-300 group-hover:scale-110"></i>
                                         <span className="font-medium text-xs text-center">Leadership</span>

@@ -196,17 +196,17 @@ const Leadership = () => {
                     <div className="relative space-y-12">
 
                         {/* Timeline Line */}
-                        <div className="absolute left-12 top-0 bottom-0 w-1 bg-blue-600 rounded-full"></div>
+                        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-1 bg-blue-600 rounded-full"></div>
 
                         {leadershipRoles.map((orgData, index) => (
                             <div
                                 key={index}
-                                className="relative pl-32 md:pl-36 group"
+                                className="relative pl-16 md:pl-36 group"
                                 data-aos="fade-up"
                                 data-aos-delay={(index + 1) * 100}
                             >
                                 {/* Timeline Icon - center aligned with line */}
-                                <div className="absolute left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10">
+                                <div className="absolute left-[-6px] md:left-[18px] top-0 h-16 w-16 flex items-center justify-center z-10 transform scale-75 md:scale-100 origin-center">
                                     {/* Gap Mask */}
                                     <div className="h-16 w-16 bg-slate-50 dark:bg-slate-950 rounded-full flex items-center justify-center">
                                         {/* Outer Ring & Icon */}
