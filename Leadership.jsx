@@ -180,11 +180,11 @@ const Leadership = () => {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
+                    <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
                         <span id="leadership-typing-text" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300"></span>
                         <span className="w-1 h-8 md:h-12 bg-cyan-300 animate-pulse inline-block ml-1 align-middle"></span>
                     </h1>
-                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-bold">
+                    <p className="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-bold">
                         A journey of leading teams, organizing impactful events, and contributing to the engineering community.
                     </p>
                 </div>
@@ -221,14 +221,14 @@ const Leadership = () => {
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full"></div>
                                     <div className="relative z-10">
                                         <div className="mb-6 pb-4 border-b border-slate-200 dark:border-slate-800">
-                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{orgData.organization}</h3>
+                                            <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">{orgData.organization}</h3>
                                         </div>
                                         <div className="space-y-8">
                                             {orgData.roles.map((roleItem, roleIndex) => (
                                                 <div key={roleIndex} className="relative">
                                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                                                        <h4 className="text-xl font-bold text-primary-600 dark:text-primary-400">{roleItem.title}</h4>
-                                                        <span className="text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap self-start">
+                                                        <h4 className="text-lg md:text-xl font-bold text-primary-600 dark:text-primary-400">{roleItem.title}</h4>
+                                                        <span className="text-xs md:text-sm font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full whitespace-nowrap self-start">
                                                             {roleItem.period}
                                                         </span>
                                                     </div>

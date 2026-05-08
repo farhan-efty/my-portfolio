@@ -67,11 +67,11 @@ const Education = () => {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
+                    <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
                         <span id="education-typing-text" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300"></span>
                         <span className="w-1 h-8 md:h-12 bg-cyan-300 animate-pulse inline-block ml-1 align-middle"></span>
                     </h1>
-                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-justify font-bold">
+                    <p className="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-justify font-bold">
                         Building a strong foundation in Electrical & Electronic Engineering with a focus on VLSI, Embedded Systems, and Power.
                     </p>
                 </div>
@@ -96,8 +96,8 @@ const Education = () => {
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                                             <div>
-                                                <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-tight">B.Sc. in Electrical and Electronic Engineering</h3>
-                                                <p className="text-base md:text-lg text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Ahsanullah University of Science and Technology (AUST)</p>
+                                                <h3 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-white leading-tight">B.Sc. in Electrical and Electronic Engineering</h3>
+                                                <p className="text-sm md:text-lg text-emerald-600 dark:text-emerald-400 font-semibold mt-1">Ahsanullah University of Science and Technology (AUST)</p>
                                             </div>
                                             <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2019 – 2023</p>
@@ -196,8 +196,8 @@ const Education = () => {
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                             <div>
-                                                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Higher Secondary Certificate (HSC)</h3>
-                                                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mt-1">Dhaka City College, Dhaka</p>
+                                                <h3 className="text-base md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Higher Secondary Certificate (HSC)</h3>
+                                                <p className="text-xs md:text-base text-slate-600 dark:text-slate-400 mt-1">Dhaka City College, Dhaka</p>
                                             </div>
                                             <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2016 – 2018</p>
@@ -225,8 +225,8 @@ const Education = () => {
                                     <div className="relative z-10">
                                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                                             <div>
-                                                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Secondary School Certificate (SSC)</h3>
-                                                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 mt-1">Gobindaganj Govt. High School, Gobindaganj</p>
+                                                <h3 className="text-base md:text-xl font-bold text-slate-900 dark:text-white leading-tight">Secondary School Certificate (SSC)</h3>
+                                                <p className="text-xs md:text-base text-slate-600 dark:text-slate-400 mt-1">Gobindaganj Govt. High School, Gobindaganj</p>
                                             </div>
                                             <div className="text-left md:text-right mt-3 md:mt-0 flex flex-row md:flex-col gap-3 md:gap-0">
                                                 <p className="text-sm text-slate-500 dark:text-slate-400"><i className="far fa-calendar-alt mr-1"></i>2016</p>

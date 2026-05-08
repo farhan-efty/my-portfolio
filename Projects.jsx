@@ -153,11 +153,11 @@ const Projects = () => {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
+                    <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight min-h-[60px] md:min-h-[80px]">
                         <span id="projects-typing-text" className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300"></span>
                         <span className="w-1 h-8 md:h-12 bg-cyan-300 animate-pulse inline-block ml-1 align-middle"></span>
                     </h1>
-                    <p className="text-lg md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-bold">
+                    <p className="text-base md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-bold">
                         Exploring the frontiers of VLSI design, Embedded Systems, and Power Engineering.
                     </p>
                 </div>
@@ -208,7 +208,7 @@ const Projects = () => {
                                 </div>
                                 <div className="flex-1 p-6 flex flex-col">
                                     <div className="mb-4">
-                                        <h3 className={`text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors ${project.hoverColor}`}>
+                                        <h3 className={`text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors ${project.hoverColor}`}>
                                             {project.title}
                                         </h3>
                                         <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 leading-relaxed">

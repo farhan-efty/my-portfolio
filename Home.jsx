@@ -136,14 +136,14 @@ const Home = () => {
 
                         {/* Text Content */}
                         <div className="space-y-4 max-w-4xl">
-                            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
+                            <h1 className="text-4xl md:text-7xl font-extrabold text-white tracking-tight">
                                 Farhan Muhib Efty
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-medium min-h-[40px] flex items-center justify-center gap-1">
+                            <p className="text-lg md:text-2xl text-slate-300 font-medium min-h-[40px] flex items-center justify-center gap-1">
                                 <span id="typing-text"></span>
                                 <span className="w-1 h-8 bg-blue-500 animate-pulse"></span>
                             </p>
-                            <h2 className="text-2xl md:text-3xl font-bold text-white tracking-wide mt-2">
+                            <h2 className="text-xl md:text-3xl font-bold text-white tracking-wide mt-2">
                                 <a href="https://www.adnsemicon.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">ADN SEMICONDUCTORS</a>
                             </h2>
                         </div>
@@ -155,7 +155,7 @@ const Home = () => {
                     <div className="container mx-auto px-6">
                         {/* Section Header */}
                         <div className="flex justify-center mb-12" data-aos="fade-down">
-                            <h2 className="text-4xl font-bold text-white flex items-center gap-3">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
                                 <span className="bg-blue-600/20 p-3 rounded-full text-blue-500">
                                     <i className="fas fa-user"></i>
                                 </span>
@@ -172,7 +172,7 @@ const Home = () => {
                                         <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-600/20">
                                             <i className="fas fa-user-tie"></i>
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white">Professional Background</h3>
+                                        <h3 className="text-xl md:text-2xl font-bold text-white">Professional Background</h3>
                                     </div>
                                     <div className="space-y-4 text-slate-300 leading-relaxed text-justify">
                                         <p>
@@ -241,7 +241,7 @@ const Home = () => {
                 <section id="experience" className="py-12 bg-white dark:bg-slate-950">
                     <div className="container mx-auto px-6">
                         <div className="flex justify-center mb-12" data-aos="fade-down">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
+                            <h2 className="text-2xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                 <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
                                     <i className="fas fa-briefcase"></i>
                                 </span>
@@ -260,7 +260,7 @@ const Home = () => {
                                         <div className="relative z-10">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                                                 <div>
-                                                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Assistant Engineer</h3>
+                                                    <h3 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-white">Assistant Engineer</h3>
                                                     <p className="text-md text-slate-400 mt-1 font-bold">RTL Design and Verification</p>
                                                     <p className="text-blue-600 dark:text-blue-400 font-medium"><a href="https://www.adnsemicon.com/" target="_blank" rel="noopener noreferrer" className="hover:underline"><strong>ADN SEMICONDUCTORS</strong></a></p>
                                                 </div>
@@ -302,7 +302,7 @@ const Home = () => {
                         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                             {/* Technical Skills */}
                             <div data-aos="fade-right">
-                                <h3 className="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
+                                <h3 className="text-lg md:text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
                                     <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 p-2 rounded-lg"><i className="fas fa-code"></i></span>
                                     Technical Skills
                                 </h3>
@@ -330,7 +330,7 @@ const Home = () => {
 
                             {/* Soft Skills */}
                             <div data-aos="fade-left">
-                                <h3 className="text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
+                                <h3 className="text-lg md:text-xl font-bold mb-6 flex items-center gap-3 text-slate-800 dark:text-slate-200">
                                     <span className="bg-purple-100 dark:bg-purple-900/30 text-purple-600 p-2 rounded-lg"><i className="fas fa-users"></i></span>
                                     Soft Skills & Tools
                                 </h3>
@@ -363,7 +363,7 @@ const Home = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16" data-aos="fade-up">
                             <div className="flex justify-center mb-4">
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
+                                <h2 className="text-2xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                     <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
                                         <i className="fas fa-star"></i>
                                     </span>
@@ -468,7 +468,7 @@ const Home = () => {
                     {/* Simplified for brevity, in a real migration, we might iterate data, but for now copying structure */}
                     <div className="container mx-auto px-6">
                         <div className="flex justify-center mb-12">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
+                            <h2 className="text-2xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                 <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
                                     <i className="fas fa-users"></i>
                                 </span>
@@ -555,7 +555,7 @@ const Home = () => {
                                             {/* Header - Always Visible */}
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-default">
                                                 <div>
-                                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{role.title}</h3>
+                                                    <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{role.title}</h3>
                                                     <p className="text-blue-600 dark:text-blue-400 font-medium">{role.organization}</p>
                                                 </div>
                                                 <div className="flex items-center gap-3 text-slate-500 bg-white dark:bg-slate-900 px-4 py-2 rounded-full text-sm font-medium self-start md:self-center shadow-sm">
@@ -593,7 +593,7 @@ const Home = () => {
                 <section id="education" className="py-12 bg-white dark:bg-slate-950">
                     <div className="container mx-auto px-6">
                         <div className="flex justify-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
+                            <h2 className="text-2xl md:text-4xl font-bold text-slate-800 dark:text-white flex items-center gap-3">
                                 <span className="bg-blue-600/10 dark:bg-blue-600/20 p-3 rounded-full text-blue-600 dark:text-blue-500">
                                     <i className="fas fa-graduation-cap"></i>
                                 </span>
